@@ -3,17 +3,25 @@
 @tailwind utilities;
 
 @layer base {
+  * {
+    @apply scroll-smooth;
+  }
+
   body {
-    @apply bg-white text-gray-900;
+    @apply bg-gradient-to-b from-purple-50 via-pink-50 to-blue-50 text-gray-900;
   }
 }
 
 @layer components {
   .btn-primary {
-    @apply bg-primary-300 hover:bg-primary-400 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200;
+    @apply bg-gradient-to-r from-purple-600 via-pink-600 to-red-500 hover:from-purple-700 hover:via-pink-700 hover:to-red-600 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105;
   }
 
   .btn-secondary {
-    @apply bg-gray-800 hover:bg-gray-900 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200;
+    @apply bg-white hover:bg-gray-50 text-gray-900 font-semibold py-3 px-8 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl border-2 border-gray-200 hover:border-gray-300;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-emotion-blue via-emotion-pink to-emotion-coral bg-clip-text text-transparent;
   }
 }
