@@ -109,7 +109,7 @@ export default function Home() {
                   className="w-32 h-32 flex items-center justify-center"
                 >
                   <Image
-                    src="/images/logo.svg"
+                    src="/images/logo1.png"
                     alt="Emotion Buddy Logo"
                     width={128}
                     height={128}
