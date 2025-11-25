@@ -2,13 +2,13 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Emotion Buddy - Your Personal AI Companion for Emotional Wellness',
-  description: 'Transform your emotional wellness journey with Emotion Buddy. Smart journaling, mood tracking, and AI-powered insights to help you understand yourself better.',
-  keywords: ['emotion buddy', 'mental health', 'journaling', 'mood tracking', 'emotional wellness', 'AI companion'],
+  title: 'Emotion Buddy - AI Journaling with 12+ Analytics | Track Your Mental Health',
+  description: 'Professional emotional wellness app with voice journaling, mood tracking on precision scales, and 12+ analytics visualizations including emotional journey charts, mood alignment, and crisis detection. AES-256 encrypted. Instant data deletion. Free for iOS & Android.',
+  keywords: ['mood tracker', 'mental health app', 'AI journaling', 'emotional wellness', 'mood analytics', 'daily journal', 'voice notes', 'crisis detection', 'emotion tracking', 'mental health tracker', 'journal app', 'mindfulness', 'self-care'],
   authors: [{ name: 'Emotion Buddy' }],
   openGraph: {
-    title: 'Emotion Buddy - Your Personal AI Companion for Emotional Wellness',
-    description: 'Transform your emotional wellness journey with smart journaling, mood tracking, and AI-powered insights.',
+    title: 'Emotion Buddy - AI Journaling with 12+ Professional Analytics',
+    description: 'Track your emotional wellness with precision mood tracking, 7 different visualization types, and AI-powered insights. Full privacy with instant account deletion and AES-256 encryption.',
     type: 'website',
     url: 'https://emotionbuddy.ai',
   },

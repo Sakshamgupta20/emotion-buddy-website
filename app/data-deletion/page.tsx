@@ -12,24 +12,24 @@ export default function DataDeletion() {
     <div className="min-h-screen flex flex-col">
       <Header />
 
-      <main className="flex-grow bg-gray-50 py-12">
+      <main className="flex-grow bg-transparent py-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-lg shadow-sm p-8 md:p-12">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">Account & Data Deletion</h1>
-            <p className="text-gray-600 mb-8">
-              You have complete control over your data. This page explains how to permanently delete your account and all associated data.
+          <div className="glass-card p-8 md:p-12">
+            <h1 className="text-4xl font-bold gradient-text mb-4">Data Deletion</h1>
+            <p className="text-gray-400 mb-8">
+              Learn how to permanently delete your account and all associated data.
             </p>
 
             {/* In-App Deletion */}
             <section className="mb-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Delete Your Account In-App</h2>
-              <p className="text-gray-700 mb-4">
+              <h2 className="text-2xl font-bold text-gray-100 mb-4">Delete Your Account In-App</h2>
+              <p className="text-gray-300 mb-4">
                 The easiest way to delete your account is directly through the Emotion Buddy mobile app.
               </p>
 
               <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">Step-by-Step Instructions:</h3>
-                <ol className="list-decimal pl-6 text-gray-700 space-y-2">
+                <h3 className="text-lg font-semibold text-gray-100 mb-3">Step-by-Step Instructions:</h3>
+                <ol className="list-decimal pl-6 text-gray-300 space-y-2">
                   <li>Open the <strong>Emotion Buddy</strong> mobile app on your device</li>
                   <li>Navigate to the <strong>Profile</strong> tab (bottom navigation bar)</li>
                   <li>Tap on <strong>Settings</strong> (gear icon in the top right)</li>
@@ -41,11 +41,11 @@ export default function DataDeletion() {
               </div>
 
               <div className="bg-gray-100 rounded-lg p-6 mb-4">
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">Visual Guide:</h3>
-                <p className="text-gray-700 mb-2">
+                <h3 className="text-lg font-semibold text-gray-100 mb-3">Visual Guide:</h3>
+                <p className="text-gray-300 mb-2">
                   <strong>Location:</strong> Profile → Settings → Danger Zone → Delete Account
                 </p>
-                <p className="text-gray-600 text-sm italic">
+                <p className="text-gray-400 text-sm italic">
                   Look for the red "Delete Account" button at the bottom of the Settings screen in the "Danger Zone" section.
                 </p>
               </div>
@@ -53,40 +53,40 @@ export default function DataDeletion() {
 
             {/* Alternative Method */}
             <section className="mb-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Alternative: Email Request</h2>
-              <p className="text-gray-700 mb-4">
+              <h2 className="text-2xl font-bold text-gray-100 mb-4">Alternative: Email Request</h2>
+              <p className="text-gray-300 mb-4">
                 If you're unable to access the app or prefer to delete your account via email, you can contact our support team:
               </p>
-              <div className="bg-gray-50 rounded-lg p-4 mb-4">
-                <p className="text-gray-700">
+              <div className="bg-transparent rounded-lg p-4 mb-4">
+                <p className="text-gray-300">
                   <strong>Email:</strong>{' '}
                   <a href="mailto:support@emotionbuddy.ai" className="text-primary-500 hover:underline">
                     support@emotionbuddy.ai
                   </a>
                 </p>
-                <p className="text-gray-700 mt-2">
+                <p className="text-gray-300 mt-2">
                   <strong>Subject:</strong> Account Deletion Request
                 </p>
-                <p className="text-gray-700 mt-2">
+                <p className="text-gray-300 mt-2">
                   <strong>Include:</strong> The email address associated with your account
                 </p>
               </div>
-              <p className="text-gray-600 text-sm">
+              <p className="text-gray-400 text-sm">
                 We'll process your deletion request within 48 hours and send you a confirmation email.
               </p>
             </section>
 
             {/* What Gets Deleted */}
             <section className="mb-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">What Gets Deleted</h2>
-              <p className="text-gray-700 mb-4">
+              <h2 className="text-2xl font-bold text-gray-100 mb-4">What Gets Deleted</h2>
+              <p className="text-gray-300 mb-4">
                 When you delete your account, <strong>all</strong> of your personal data is permanently removed:
               </p>
 
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-red-50 border border-red-200 rounded-lg p-4">
-                  <h3 className="font-semibold text-gray-900 mb-2">Personal Information</h3>
-                  <ul className="list-disc pl-6 text-gray-700 space-y-1 text-sm">
+                  <h3 className="font-semibold text-gray-100 mb-2">Personal Information</h3>
+                  <ul className="list-disc pl-6 text-gray-300 space-y-1 text-sm">
                     <li>Name and email address</li>
                     <li>Profile picture and bio</li>
                     <li>Account credentials</li>
@@ -95,8 +95,8 @@ export default function DataDeletion() {
                 </div>
 
                 <div className="bg-red-50 border border-red-200 rounded-lg p-4">
-                  <h3 className="font-semibold text-gray-900 mb-2">Journal Content</h3>
-                  <ul className="list-disc pl-6 text-gray-700 space-y-1 text-sm">
+                  <h3 className="font-semibold text-gray-100 mb-2">Journal Content</h3>
+                  <ul className="list-disc pl-6 text-gray-300 space-y-1 text-sm">
                     <li>All journal entries (text)</li>
                     <li>All mood ratings and emotional data</li>
                     <li>All AI-generated insights</li>
@@ -105,8 +105,8 @@ export default function DataDeletion() {
                 </div>
 
                 <div className="bg-red-50 border border-red-200 rounded-lg p-4">
-                  <h3 className="font-semibold text-gray-900 mb-2">Media Files</h3>
-                  <ul className="list-disc pl-6 text-gray-700 space-y-1 text-sm">
+                  <h3 className="font-semibold text-gray-100 mb-2">Media Files</h3>
+                  <ul className="list-disc pl-6 text-gray-300 space-y-1 text-sm">
                     <li>All uploaded photos</li>
                     <li>All uploaded videos</li>
                     <li>All audio recordings (voice notes)</li>
@@ -114,8 +114,8 @@ export default function DataDeletion() {
                 </div>
 
                 <div className="bg-red-50 border border-red-200 rounded-lg p-4">
-                  <h3 className="font-semibold text-gray-900 mb-2">Usage Data</h3>
-                  <ul className="list-disc pl-6 text-gray-700 space-y-1 text-sm">
+                  <h3 className="font-semibold text-gray-100 mb-2">Usage Data</h3>
+                  <ul className="list-disc pl-6 text-gray-300 space-y-1 text-sm">
                     <li>App usage history</li>
                     <li>Analytics data</li>
                     <li>Interaction logs</li>
@@ -126,8 +126,8 @@ export default function DataDeletion() {
 
             {/* Deletion Timeline */}
             <section className="mb-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Deletion Timeline</h2>
-              
+              <h2 className="text-2xl font-bold text-gray-100 mb-4">Deletion Timeline</h2>
+
               <div className="space-y-4">
                 <div className="flex items-start">
                   <div className="flex-shrink-0 w-32 pt-1">
@@ -136,8 +136,8 @@ export default function DataDeletion() {
                     </span>
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-semibold text-gray-900 mb-2">Instant Actions</h3>
-                    <ul className="list-disc pl-6 text-gray-700 space-y-1">
+                    <h3 className="font-semibold text-gray-100 mb-2">Instant Actions</h3>
+                    <ul className="list-disc pl-6 text-gray-300 space-y-1">
                       <li>Account access is revoked immediately</li>
                       <li>You are logged out of all devices</li>
                       <li>All data is deleted from production databases</li>
@@ -153,8 +153,8 @@ export default function DataDeletion() {
                     </span>
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-semibold text-gray-900 mb-2">Backup Removal</h3>
-                    <ul className="list-disc pl-6 text-gray-700 space-y-1">
+                    <h3 className="font-semibold text-gray-100 mb-2">Backup Removal</h3>
+                    <ul className="list-disc pl-6 text-gray-300 space-y-1">
                       <li>Data automatically purged from all backup systems</li>
                       <li>Complete and permanent data removal</li>
                     </ul>
@@ -190,15 +190,15 @@ export default function DataDeletion() {
 
             {/* Data Export */}
             <section className="mb-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Export Your Data First</h2>
-              <p className="text-gray-700 mb-4">
+              <h2 className="text-2xl font-bold text-gray-100 mb-4">Export Your Data First</h2>
+              <p className="text-gray-300 mb-4">
                 Before deleting your account, you may want to export your data:
               </p>
-              <div className="bg-gray-50 rounded-lg p-4">
-                <p className="text-gray-700 mb-2">
+              <div className="bg-transparent rounded-lg p-4">
+                <p className="text-gray-300 mb-2">
                   <strong>To export your data:</strong>
                 </p>
-                <ol className="list-decimal pl-6 text-gray-700 space-y-1">
+                <ol className="list-decimal pl-6 text-gray-300 space-y-1">
                   <li>Open the Emotion Buddy app</li>
                   <li>Go to Profile → Settings</li>
                   <li>Tap "Export My Data"</li>
@@ -210,8 +210,8 @@ export default function DataDeletion() {
 
             {/* More Information */}
             <section className="mb-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">More Information</h2>
-              <p className="text-gray-700 mb-4">
+              <h2 className="text-2xl font-bold text-gray-100 mb-4">More Information</h2>
+              <p className="text-gray-300 mb-4">
                 For more details about how we handle your data, please review:
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -219,32 +219,32 @@ export default function DataDeletion() {
                   href="/privacy"
                   className="flex-1 bg-primary-50 hover:bg-primary-100 border border-primary-200 rounded-lg p-4 transition-colors"
                 >
-                  <h3 className="font-semibold text-gray-900 mb-1">Privacy Policy</h3>
-                  <p className="text-gray-600 text-sm">Learn how we protect and handle your data</p>
+                  <h3 className="font-semibold text-gray-100 mb-1">Privacy Policy</h3>
+                  <p className="text-gray-400 text-sm">Learn how we protect and handle your data</p>
                 </Link>
                 <Link
                   href="/support"
                   className="flex-1 bg-primary-50 hover:bg-primary-100 border border-primary-200 rounded-lg p-4 transition-colors"
                 >
-                  <h3 className="font-semibold text-gray-900 mb-1">Support Center</h3>
-                  <p className="text-gray-600 text-sm">Get help with your account</p>
+                  <h3 className="font-semibold text-gray-100 mb-1">Support Center</h3>
+                  <p className="text-gray-400 text-sm">Get help with your account</p>
                 </Link>
               </div>
             </section>
 
             {/* Contact */}
-            <section className="bg-gray-50 rounded-lg p-6">
-              <h2 className="text-xl font-bold text-gray-900 mb-3">Need Help?</h2>
-              <p className="text-gray-700 mb-2">
+            <section className="bg-transparent rounded-lg p-6">
+              <h2 className="text-xl font-bold text-gray-100 mb-3">Need Help?</h2>
+              <p className="text-gray-300 mb-2">
                 If you have questions about account deletion, please contact us:
               </p>
-              <p className="text-gray-700">
+              <p className="text-gray-300">
                 <strong>Email:</strong>{' '}
                 <a href="mailto:support@emotionbuddy.ai" className="text-primary-500 hover:underline">
                   support@emotionbuddy.ai
                 </a>
               </p>
-              <p className="text-gray-600 text-sm mt-2">
+              <p className="text-gray-400 text-sm mt-2">
                 We typically respond within 24 hours.
               </p>
             </section>

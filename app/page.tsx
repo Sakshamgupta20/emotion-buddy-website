@@ -200,7 +200,7 @@ export default function Home() {
         </section>
 
         {/* Features Section */}
-        <section id="features" className="px-4 py-20 bg-white/50 backdrop-blur-sm">
+        <section id="features" className="px-4 py-20 relative">
           <div className="max-w-6xl mx-auto">
             <motion.div
               className="text-center mb-16"
@@ -210,10 +210,10 @@ export default function Home() {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-4 gradient-text">
-                Powerful Features
+                Professional-Grade Features
               </h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Everything you need for mindful journaling and emotional wellness
+              <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+                From advanced mood tracking to comprehensive analytics—everything you need for meaningful self-discovery
               </p>
             </motion.div>
 
@@ -223,7 +223,7 @@ export default function Home() {
                 return (
                   <motion.div
                     key={index}
-                    className="group p-8 rounded-3xl bg-white shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100"
+                    className="group glass-card p-8 spotlight"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -237,7 +237,7 @@ export default function Home() {
                     >
                       <Icon className="w-7 h-7 text-white" />
                     </motion.div>
-                    <h3 className="text-xl font-semibold mb-3">
+                    <h3 className="text-xl font-semibold mb-3 text-gray-100">
                       {feature.title}
                     </h3>
                     <p className="text-gray-600">
