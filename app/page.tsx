@@ -298,20 +298,19 @@ export default function Home() {
                   </li>
                   <li className="flex items-start">
                     <span className="mr-2">✓</span>
-                    <span>iCloud sync across devices</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="mr-2">✓</span>
                     <span>Face ID / Touch ID security</span>
                   </li>
                 </ul>
-                <motion.button
-                  className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white rounded-full py-3 px-6 font-semibold transition-all shadow-lg"
+                <motion.a
+                  href="https://apps.apple.com/us/app/emotion-buddy/id6755134472"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white rounded-full py-3 px-6 font-semibold transition-all shadow-lg block text-center"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
                   Download on App Store
-                </motion.button>
+                </motion.a>
               </motion.div>
 
               {/* Android Card */}
