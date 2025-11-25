@@ -109,7 +109,7 @@ export default function Home() {
                   className="w-32 h-32 flex items-center justify-center"
                 >
                   <Image
-                    src="/images/logo1.png"
+                    src="/images/logo.png"
                     alt="Emotion Buddy Logo"
                     width={128}
                     height={128}
@@ -342,20 +342,19 @@ export default function Home() {
                   </li>
                   <li className="flex items-start">
                     <span className="mr-2">✓</span>
-                    <span>Google Drive backup</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="mr-2">✓</span>
                     <span>Fingerprint authentication</span>
                   </li>
                 </ul>
-                <motion.button
-                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-full py-3 px-6 font-semibold transition-all shadow-lg"
+                <motion.a
+                  href="https://play.google.com/store/apps/details?id=com.emotionbuddy.mobile"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-full py-3 px-6 font-semibold transition-all shadow-lg block text-center"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
                   Get it on Google Play
-                </motion.button>
+                </motion.a>
               </motion.div>
             </div>
           </div>

@@ -319,11 +319,34 @@ export default function TermsOfService() {
             {/* Section 15: Governing Law */}
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">15. Governing Law</h2>
+
+              <h3 className="text-xl font-semibold text-gray-800 mb-3">15.1 Applicable Law</h3>
               <p className="text-gray-700 mb-4">
                 These Terms shall be governed by and construed in accordance with the laws of the United States, without regard to conflict of law principles.
               </p>
-              <p className="text-gray-700">
-                Any disputes shall be resolved in the courts located in [Your Jurisdiction].
+
+              <h3 className="text-xl font-semibold text-gray-800 mb-3">15.2 Dispute Resolution</h3>
+              <p className="text-gray-700 mb-3">
+                In the event of any dispute, claim, or controversy arising out of or relating to these Terms or the Service:
+              </p>
+              <ul className="list-disc pl-6 text-gray-700 mb-4 space-y-1">
+                <li>We encourage you to first contact us at support@emotionbuddy.ai to resolve the issue informally</li>
+                <li>If informal resolution is not successful, disputes may be resolved through binding arbitration or small claims court</li>
+                <li>Arbitration shall be conducted by a neutral arbitrator in accordance with applicable arbitration rules</li>
+                <li>Each party shall bear their own costs and fees unless otherwise awarded by the arbitrator</li>
+              </ul>
+
+              <h3 className="text-xl font-semibold text-gray-800 mb-3">15.3 Company Information</h3>
+              <p className="text-gray-700 mb-3">
+                <strong>Legal Entity:</strong> Emotion Buddy
+              </p>
+              <p className="text-gray-700 mb-4">
+                <strong>Contact:</strong> support@emotionbuddy.ai
+              </p>
+
+              <h3 className="text-xl font-semibold text-gray-800 mb-3">15.4 Waiver of Class Actions</h3>
+              <p className="text-gray-700 mb-4">
+                You agree that any dispute resolution proceedings will be conducted only on an individual basis and not in a class, consolidated, or representative action.
               </p>
             </section>
 

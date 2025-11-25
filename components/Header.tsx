@@ -26,6 +26,9 @@ export default function Header() {
             <Link href="/#download" className="text-gray-600 hover:text-primary-500 transition-colors">
               Download
             </Link>
+            <Link href="/support" className="text-gray-600 hover:text-primary-500 transition-colors">
+              Support
+            </Link>
             <Link href="/privacy" className="text-gray-600 hover:text-primary-500 transition-colors">
               Privacy
             </Link>
@@ -60,6 +63,9 @@ export default function Header() {
               </Link>
               <Link href="/#download" className="text-gray-600 hover:text-primary-500" onClick={() => setMobileMenuOpen(false)}>
                 Download
+              </Link>
+              <Link href="/support" className="text-gray-600 hover:text-primary-500" onClick={() => setMobileMenuOpen(false)}>
+                Support
               </Link>
               <Link href="/privacy" className="text-gray-600 hover:text-primary-500" onClick={() => setMobileMenuOpen(false)}>
                 Privacy

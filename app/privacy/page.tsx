@@ -164,7 +164,198 @@ export default function PrivacyPolicy() {
               </ul>
             </section>
 
-            {/* Section 7: Account Deletion */}
+            {/* Section 5: Data Retention */}
+            <section className="mb-8">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">5. Data Retention</h2>
+
+              <h3 className="text-xl font-semibold text-gray-800 mb-3">5.1 Active Accounts</h3>
+              <p className="text-gray-700 mb-3">
+                We retain your data for as long as your account is active and you continue to use our Service.
+              </p>
+              <ul className="list-disc pl-6 text-gray-700 mb-4 space-y-1">
+                <li>Journal entries and mood data are stored indefinitely while your account is active</li>
+                <li>Media files (photos, videos, audio) remain accessible as long as you maintain your account</li>
+                <li>You can delete individual entries or media files at any time</li>
+              </ul>
+
+              <h3 className="text-xl font-semibold text-gray-800 mb-3">5.2 Deleted Accounts</h3>
+              <p className="text-gray-700 mb-3">When you delete your account:</p>
+              <ul className="list-disc pl-6 text-gray-700 mb-4 space-y-1">
+                <li><strong>Immediate deletion:</strong> All data is instantly removed from production databases</li>
+                <li><strong>90-day backup retention:</strong> Encrypted backups are maintained for disaster recovery and automatically purged after 90 days</li>
+              </ul>
+
+              <h3 className="text-xl font-semibold text-gray-800 mb-3">5.3 Legal and Regulatory Requirements</h3>
+              <p className="text-gray-700 mb-4">
+                In some cases, we may be required to retain certain data for longer periods to comply with legal obligations, such as:
+              </p>
+              <ul className="list-disc pl-6 text-gray-700 mb-4 space-y-1">
+                <li>Tax and accounting records (typically 7 years)</li>
+                <li>Records subject to legal holds or ongoing litigation</li>
+                <li>Records required by law enforcement or regulatory authorities</li>
+              </ul>
+              <p className="text-gray-700">
+                Such retention is limited to the minimum necessary data and duration required by law.
+              </p>
+            </section>
+
+            {/* Section 6: Your Rights */}
+            <section className="mb-8">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">6. Your Rights</h2>
+              <p className="text-gray-700 mb-4">
+                You have complete control over your data. We respect your privacy rights and make it easy to exercise them.
+              </p>
+
+              <h3 className="text-xl font-semibold text-gray-800 mb-3">6.1 Right to Access</h3>
+              <p className="text-gray-700 mb-3">
+                You can access all your data at any time through the app.
+              </p>
+              <ul className="list-disc pl-6 text-gray-700 mb-4 space-y-1">
+                <li>View all journal entries, mood data, and insights anytime</li>
+                <li>Access your profile information in Settings</li>
+                <li>Request a copy of all data we have about you by emailing support@emotionbuddy.ai</li>
+              </ul>
+
+              <h3 className="text-xl font-semibold text-gray-800 mb-3">6.2 Right to Download (Data Portability)</h3>
+              <p className="text-gray-700 mb-3">
+                Export your data in a machine-readable format for use elsewhere.
+              </p>
+              <ul className="list-disc pl-6 text-gray-700 mb-4 space-y-1">
+                <li>Go to Profile → Settings → Export My Data</li>
+                <li>Choose JSON or PDF format</li>
+                <li>Receive download link via email within 24 hours</li>
+                <li>Includes all journal entries, mood ratings, and metadata</li>
+              </ul>
+
+              <h3 className="text-xl font-semibold text-gray-800 mb-3">6.3 Right to Delete</h3>
+              <p className="text-gray-700 mb-3">
+                Permanently delete your account and all associated data.
+              </p>
+              <ul className="list-disc pl-6 text-gray-700 mb-4 space-y-1">
+                <li>Delete individual entries anytime within the app</li>
+                <li>Delete your entire account: Profile → Settings → Danger Zone → Delete Account</li>
+                <li>Alternative: Email support@emotionbuddy.ai with deletion request</li>
+                <li>Data deletion is instant and permanent (90-day backup retention for disaster recovery)</li>
+              </ul>
+              <p className="text-gray-700 mb-4">
+                Learn more: <Link href="/data-deletion" className="text-primary-500 hover:underline">Data Deletion Instructions</Link>
+              </p>
+
+              <h3 className="text-xl font-semibold text-gray-800 mb-3">6.4 Right to Opt-Out</h3>
+              <p className="text-gray-700 mb-3">
+                Control how your data is used.
+              </p>
+              <ul className="list-disc pl-6 text-gray-700 mb-4 space-y-1">
+                <li><strong>Disable AI Analysis:</strong> Settings → AI Settings → Toggle off "Enable AI Analysis"</li>
+                <li><strong>Opt out of analytics:</strong> Settings → Privacy → Disable "Share Anonymous Usage Data"</li>
+                <li><strong>Opt out of emails:</strong> Unsubscribe link in any email we send</li>
+              </ul>
+
+              <h3 className="text-xl font-semibold text-gray-800 mb-3">6.5 How to Exercise Your Rights</h3>
+              <p className="text-gray-700 mb-3">
+                To exercise any of these rights:
+              </p>
+              <ul className="list-disc pl-6 text-gray-700 mb-4 space-y-1">
+                <li>Most rights can be exercised directly in the app (Settings menu)</li>
+                <li>For requests requiring support: Email support@emotionbuddy.ai</li>
+                <li>We will respond within 30 days</li>
+                <li>No fee is charged for exercising your rights</li>
+                <li>We may verify your identity before processing sensitive requests</li>
+              </ul>
+            </section>
+
+            {/* Section 6.5: Data Breach Notification */}
+            <section className="mb-8">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">6.5 Data Breach Notification</h2>
+              <p className="text-gray-700 mb-4">
+                While we implement strong security measures to protect your data, no system is completely invulnerable. In the unlikely event of a data breach:
+              </p>
+
+              <h3 className="text-xl font-semibold text-gray-800 mb-3">Our Commitment</h3>
+              <ul className="list-disc pl-6 text-gray-700 mb-4 space-y-1">
+                <li><strong>72-hour notification:</strong> We will notify affected users within 72 hours of discovering a breach</li>
+                <li><strong>Transparent communication:</strong> We will provide clear information about what happened</li>
+                <li><strong>Immediate action:</strong> We will take steps to contain and remediate the breach</li>
+              </ul>
+
+              <h3 className="text-xl font-semibold text-gray-800 mb-3">How We'll Notify You</h3>
+              <ul className="list-disc pl-6 text-gray-700 mb-4 space-y-1">
+                <li>Email to your registered email address</li>
+                <li>In-app notification banner</li>
+                <li>Public disclosure on our website (for significant breaches)</li>
+              </ul>
+
+              <h3 className="text-xl font-semibold text-gray-800 mb-3">What We'll Tell You</h3>
+              <ul className="list-disc pl-6 text-gray-700 mb-4 space-y-1">
+                <li>Date and nature of the breach</li>
+                <li>Types of data potentially affected</li>
+                <li>Steps we've taken to address the breach</li>
+                <li>Recommended actions you should take</li>
+                <li>Contact information for questions</li>
+              </ul>
+
+              <h3 className="text-xl font-semibold text-gray-800 mb-3">Steps You Should Take</h3>
+              <p className="text-gray-700 mb-3">
+                If you receive a breach notification:
+              </p>
+              <ul className="list-disc pl-6 text-gray-700 mb-4 space-y-1">
+                <li>Change your Emotion Buddy password immediately</li>
+                <li>If you use the same password elsewhere, change those passwords too</li>
+                <li>Enable two-factor authentication if available</li>
+                <li>Monitor your account for suspicious activity</li>
+                <li>Contact us if you have concerns: support@emotionbuddy.ai</li>
+              </ul>
+            </section>
+
+            {/* Section 6.6: Cookies and Tracking */}
+            <section className="mb-8">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">6.6 Cookies and Tracking</h2>
+
+              <h3 className="text-xl font-semibold text-gray-800 mb-3">This Website</h3>
+              <p className="text-gray-700 mb-3">
+                This marketing website (emotionbuddy.ai) may use cookies and similar technologies:
+              </p>
+              <ul className="list-disc pl-6 text-gray-700 mb-4 space-y-1">
+                <li><strong>Essential cookies:</strong> Required for the website to function properly</li>
+                <li><strong>Analytics cookies:</strong> Help us understand how visitors use our website</li>
+                <li><strong>No advertising cookies:</strong> We do not use cookies for advertising purposes</li>
+              </ul>
+
+              <h3 className="text-xl font-semibold text-gray-800 mb-3">The Mobile App</h3>
+              <p className="text-gray-700 mb-4">
+                The Emotion Buddy mobile app does not use traditional web cookies. However, we may collect:
+              </p>
+              <ul className="list-disc pl-6 text-gray-700 mb-4 space-y-1">
+                <li><strong>Anonymous usage analytics:</strong> App interactions, feature usage, crash reports</li>
+                <li><strong>Device information:</strong> OS version, device type, app version</li>
+                <li><strong>Performance metrics:</strong> Load times, error rates</li>
+              </ul>
+              <p className="text-gray-700 mb-4">
+                You can opt out of analytics: Settings → Privacy → Disable "Share Anonymous Usage Data"
+              </p>
+
+              <h3 className="text-xl font-semibold text-gray-800 mb-3">Third-Party Analytics</h3>
+              <p className="text-gray-700 mb-3">
+                We may use third-party analytics services to help improve our Service:
+              </p>
+              <ul className="list-disc pl-6 text-gray-700 mb-4 space-y-1">
+                <li>Data is anonymized and aggregated</li>
+                <li>Cannot be used to personally identify you</li>
+                <li>Helps us understand usage patterns and improve features</li>
+              </ul>
+              <p className="text-gray-700 mb-4">
+                If we use specific analytics providers, we will disclose them here and link to their privacy policies.
+              </p>
+
+              <h3 className="text-xl font-semibold text-gray-800 mb-3">Your Control</h3>
+              <ul className="list-disc pl-6 text-gray-700 mb-4 space-y-1">
+                <li>Disable cookies in your web browser settings</li>
+                <li>Opt out of analytics in the mobile app settings</li>
+                <li>Use "Do Not Track" browser settings (we respect these signals)</li>
+              </ul>
+            </section>
+
+            {/* Section 8: Account Deletion (renumbered from 7) */}
             <section className="mb-8" id="account-deletion">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">7. Account Deletion</h2>
 
@@ -220,19 +411,13 @@ export default function PrivacyPolicy() {
               <ul className="list-disc pl-6 text-gray-700 mb-4 space-y-1">
                 <li>Account access is revoked immediately</li>
                 <li>You are logged out of all devices</li>
-                <li>Account marked for permanent deletion</li>
-              </ul>
-
-              <p className="text-gray-700 mb-2"><strong>Within 30 Days:</strong></p>
-              <ul className="list-disc pl-6 text-gray-700 mb-4 space-y-1">
-                <li>All your data is permanently deleted from our production databases</li>
+                <li>All data is instantly deleted from production databases</li>
                 <li>Media files removed from cloud storage</li>
-                <li>AI analysis data purged</li>
               </ul>
 
               <p className="text-gray-700 mb-2"><strong>Within 90 Days:</strong></p>
               <ul className="list-disc pl-6 text-gray-700 mb-4 space-y-1">
-                <li>Data removed from all backup systems</li>
+                <li>Data automatically purged from all backup systems</li>
                 <li>Complete and permanent data removal</li>
               </ul>
 
