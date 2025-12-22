@@ -1,246 +1,312 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { motion, useScroll, useTransform } from 'framer-motion'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Image from 'next/image'
-import { Sparkles, Mic, MessageCircle, TrendingUp, Image as ImageIcon, Search, Heart, Apple, Smartphone } from 'lucide-react'
+import { useRef } from 'react'
+import {
+  Mic, MessageCircle, TrendingUp, Heart, Apple,
+  Smartphone, Shield, Zap, Brain, Star,
+  ChevronDown, Check, ArrowRight, Play,
+  Lock, Cloud, Smartphone as Phone
+} from 'lucide-react'
 
 export default function Home() {
+  const targetRef = useRef(null)
+  const { scrollYProgress } = useScroll({
+    target: targetRef,
+    offset: ["start start", "end start"]
+  })
+
+  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0])
+  const scale = useTransform(scrollYProgress, [0, 0.5], [1, 0.8])
+  const y = useTransform(scrollYProgress, [0, 0.5], [0, -100])
+
   const features = [
     {
       icon: Mic,
       title: 'Voice & Text Journaling',
-      description: 'Express yourself freely with text, audio recordings, or both. A distraction-free space to vent and reflect.',
-      gradient: 'from-purple-500 to-pink-500'
+      description: 'Express yourself freely through voice recordings or text. Your private space to reflect and grow.',
+      gradient: 'from-violet-500 to-purple-500'
     },
     {
       icon: MessageCircle,
       title: 'AI Chat Companion',
-      description: 'Talk to your AI companion about your thoughts and feelings. Get supportive responses and guidance.',
-      gradient: 'from-pink-500 to-red-500'
+      description: 'Have meaningful conversations with your AI companion. Get supportive, empathetic responses 24/7.',
+      gradient: 'from-fuchsia-500 to-pink-500'
     },
     {
       icon: TrendingUp,
-      title: 'Mood Tracking & Analytics',
-      description: 'Track emotions over time with 12+ visualization types including emotional journey charts and intensity heatmaps.',
-      gradient: 'from-blue-500 to-purple-500'
+      title: 'Advanced Analytics',
+      description: '12+ visualization types. Track emotional patterns, identify triggers, and celebrate your growth.',
+      gradient: 'from-cyan-500 to-blue-500'
     },
     {
-      icon: ImageIcon,
-      title: 'Rich Media Support',
-      description: 'Add photos, videos, and audio to your entries. Create a multimedia timeline of your emotional journey.',
-      gradient: 'from-green-500 to-blue-500'
+      icon: Brain,
+      title: 'AI-Powered Insights',
+      description: 'Discover patterns you never knew existed. Get personalized recommendations for your well-being.',
+      gradient: 'from-orange-500 to-red-500'
     },
     {
-      icon: Search,
-      title: 'Smart Organization',
-      description: 'Search entries, organize with tags, and favorite important moments. Your memories, beautifully organized.',
-      gradient: 'from-orange-500 to-pink-500'
+      icon: Shield,
+      title: 'Bank-Level Security',
+      description: 'AES-256 encryption, biometric authentication. Your thoughts stay yours, always.',
+      gradient: 'from-emerald-500 to-teal-500'
     },
     {
-      icon: Heart,
-      title: 'AI-Generated Insights',
-      description: 'Discover patterns in your emotions, track crisis moments, and understand your mental health journey better.',
-      gradient: 'from-red-500 to-purple-500'
+      icon: Zap,
+      title: 'Instant Mood Capture',
+      description: 'Log your mood in seconds. Beautiful, intuitive interface designed for daily use.',
+      gradient: 'from-amber-500 to-yellow-500'
+    }
+  ]
+
+  const testimonials = [
+    {
+      quote: "Emotion Buddy has completely transformed how I understand my emotions. The AI insights are incredibly accurate.",
+      author: "Sarah M.",
+      role: "Therapist",
+      rating: 5
+    },
+    {
+      quote: "Finally, an app that takes privacy seriously. I feel safe sharing my deepest thoughts here.",
+      author: "Michael R.",
+      role: "Software Engineer",
+      rating: 5
+    },
+    {
+      quote: "The voice journaling feature is a game-changer. I can process my thoughts while walking or commuting.",
+      author: "Emily K.",
+      role: "Marketing Director",
+      rating: 5
+    }
+  ]
+
+  const faqs = [
+    {
+      question: "Is my data really private?",
+      answer: "Absolutely. We use AES-256 encryption, the same standard used by banks. Your journal entries are encrypted on your device before being stored. We cannot read your data - only you can."
+    },
+    {
+      question: "How does the AI work?",
+      answer: "Our AI analyzes patterns in your journal entries to provide insights about your emotional health. It's trained to be supportive and empathetic, never judgmental. All processing respects your privacy."
+    },
+    {
+      question: "Can I export my data?",
+      answer: "Yes! You own your data. Export your entire journal history anytime in multiple formats including PDF, JSON, and plain text."
+    },
+    {
+      question: "Is there a free version?",
+      answer: "Yes! Emotion Buddy offers a generous free tier with unlimited journaling, basic mood tracking, and core features. Premium unlocks advanced analytics, AI insights, and priority support."
     }
   ]
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col overflow-x-hidden">
       <Header />
 
-      <main className="flex-grow">
+      <main className="flex-grow pt-20">
         {/* Hero Section */}
-        <section className="relative overflow-hidden px-4 py-20 md:py-32">
-          {/* Animated background gradient orbs */}
+        <section ref={targetRef} className="relative min-h-screen flex items-center justify-center overflow-hidden">
+          {/* Animated Background */}
           <div className="absolute inset-0 -z-10">
+            {/* Gradient Orbs */}
             <motion.div
-              className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-300/30 rounded-full blur-3xl"
+              className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-violet-400/20 rounded-full blur-[120px]"
               animate={{
                 scale: [1, 1.2, 1],
-                opacity: [0.3, 0.5, 0.3],
+                x: [0, 50, 0],
+                y: [0, 30, 0],
               }}
-              transition={{
-                duration: 8,
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
+              transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
             />
             <motion.div
-              className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-pink-300/30 rounded-full blur-3xl"
+              className="absolute top-1/3 right-1/4 w-[400px] h-[400px] bg-fuchsia-400/20 rounded-full blur-[120px]"
               animate={{
                 scale: [1.2, 1, 1.2],
-                opacity: [0.5, 0.3, 0.5],
+                x: [0, -30, 0],
+                y: [0, 50, 0],
               }}
-              transition={{
-                duration: 8,
-                repeat: Infinity,
-                ease: "easeInOut",
-                delay: 1
-              }}
+              transition={{ duration: 12, repeat: Infinity, ease: "easeInOut", delay: 2 }}
             />
             <motion.div
-              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-200/20 rounded-full blur-3xl"
+              className="absolute bottom-1/4 left-1/3 w-[600px] h-[600px] bg-cyan-400/15 rounded-full blur-[150px]"
               animate={{
                 scale: [1, 1.3, 1],
-                opacity: [0.2, 0.4, 0.2],
+                x: [0, -50, 0],
               }}
-              transition={{
-                duration: 10,
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
+              transition={{ duration: 18, repeat: Infinity, ease: "easeInOut", delay: 4 }}
             />
+
+            {/* Grid Pattern */}
+            <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.02)_1px,transparent_1px)] bg-[size:100px_100px]" />
           </div>
 
-          <div className="max-w-6xl mx-auto text-center">
+          <motion.div
+            style={{ opacity, scale, y }}
+            className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10"
+          >
+            {/* Badge */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-gray-200 shadow-sm mb-8"
+            >
+              <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+              <span className="text-sm text-gray-600">Now available on iOS & Android</span>
+              <ArrowRight className="w-4 h-4 text-gray-400" />
+            </motion.div>
+
             {/* Logo */}
             <motion.div
               className="flex justify-center mb-8"
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, type: "spring" }}
             >
               <div className="relative">
                 <motion.div
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.05, rotate: 5 }}
                   transition={{ type: "spring", stiffness: 300 }}
-                  className="w-32 h-32 flex items-center justify-center"
+                  className="w-28 h-28 flex items-center justify-center relative"
                 >
                   <Image
                     src="/images/logo.png"
                     alt="Emotion Buddy Logo"
-                    width={128}
-                    height={128}
-                    className="w-full h-full object-contain drop-shadow-2xl"
+                    width={112}
+                    height={112}
+                    className="w-full h-full object-contain drop-shadow-xl"
                     priority
                   />
-                </motion.div>
-                <motion.div
-                  animate={{
-                    rotate: [0, 10, -10, 0],
-                  }}
-                  transition={{
-                    duration: 2,
-                    repeat: Infinity,
-                    repeatDelay: 3
-                  }}
-                >
-                  <Sparkles className="w-6 h-6 text-emotion-coral absolute -top-2 -right-2" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-violet-400/30 to-fuchsia-400/30 rounded-3xl blur-2xl -z-10" />
                 </motion.div>
               </div>
             </motion.div>
 
-            {/* Heading */}
+            {/* Headline */}
             <motion.h1
-              className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 bg-gradient-to-r from-emotion-blue via-emotion-pink to-emotion-coral bg-clip-text text-transparent"
-              initial={{ opacity: 0, y: 20 }}
+              className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-6 tracking-tight"
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
             >
-              Emotion Buddy
+              <span className="block text-gray-900">Understand Your</span>
+              <span className="block gradient-text">Emotions Better</span>
             </motion.h1>
 
+            {/* Subheadline */}
             <motion.p
-              className="text-xl md:text-2xl text-gray-700 font-medium mb-4 max-w-3xl mx-auto"
-              initial={{ opacity: 0, y: 20 }}
+              className="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed"
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
             >
-              Your AI-Powered Journaling Companion
-            </motion.p>
-
-            <motion.p
-              className="text-lg text-gray-600 mb-12 max-w-2xl mx-auto leading-relaxed"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-            >
-              Combine traditional journaling with AI-assisted reflection. Write, record, and gain insights into your emotional journey with a mindful, peaceful experience.
+              The AI-powered journaling companion that helps you track moods,
+              discover patterns, and transform your mental wellness journey.
             </motion.p>
 
             {/* CTA Buttons */}
             <motion.div
-              className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-              initial={{ opacity: 0, y: 20 }}
+              className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.5 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
             >
               <motion.a
-                href="#download"
-                className="btn-primary inline-flex items-center justify-center"
+                href="https://apps.apple.com/us/app/emotion-buddy/id6755134472"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary flex items-center gap-3 group"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Apple className="w-5 h-5 mr-2" />
-                Download for iOS
+                <Apple className="w-6 h-6" />
+                <div className="text-left">
+                  <div className="text-xs opacity-80">Download on the</div>
+                  <div className="font-semibold">App Store</div>
+                </div>
               </motion.a>
+
               <motion.a
-                href="#download"
-                className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 hover:from-blue-700 hover:via-purple-700 hover:to-pink-700 text-white font-semibold py-3 px-10 text-lg rounded-full shadow-xl hover:shadow-2xl transition-all inline-flex items-center justify-center"
+                href="https://play.google.com/store/apps/details?id=com.emotionbuddy.mobile"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-secondary flex items-center gap-3 group"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Smartphone className="w-5 h-5 mr-2" />
-                Download for Android
+                <Play className="w-6 h-6" />
+                <div className="text-left">
+                  <div className="text-xs opacity-80">Get it on</div>
+                  <div className="font-semibold">Google Play</div>
+                </div>
               </motion.a>
             </motion.div>
 
-            <motion.p
-              className="text-sm text-gray-500 mt-8 flex items-center justify-center gap-2"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
+            {/* Scroll Indicator */}
+            <motion.div
+              className="absolute bottom-10 left-1/2 -translate-x-1/2"
+              animate={{ y: [0, 10, 0] }}
+              transition={{ duration: 2, repeat: Infinity }}
             >
-              <span className="inline-block w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-              Free to download • Premium features available
-            </motion.p>
-          </div>
+              <ChevronDown className="w-8 h-8 text-gray-400" />
+            </motion.div>
+          </motion.div>
         </section>
 
         {/* Features Section */}
-        <section id="features" className="px-4 py-20 relative">
-          <div className="max-w-6xl mx-auto">
+        <section id="features" className="py-32 relative">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 20 }}
+              className="text-center mb-20"
+              initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.8 }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold mb-4 gradient-text">
-                Professional-Grade Features
+              <motion.span
+                className="inline-block px-4 py-2 rounded-full bg-violet-100 border border-violet-200 text-violet-600 text-sm font-medium mb-6"
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+              >
+                Features
+              </motion.span>
+              <h2 className="text-4xl md:text-6xl font-bold mb-6">
+                <span className="text-gray-900">Everything you need to</span>
+                <br />
+                <span className="gradient-text">understand yourself</span>
               </h2>
-              <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-                From advanced mood tracking to comprehensive analytics—everything you need for meaningful self-discovery
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                Professional-grade tools designed for meaningful self-discovery and emotional growth.
               </p>
             </motion.div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {features.map((feature, index) => {
                 const Icon = feature.icon
                 return (
                   <motion.div
                     key={index}
-                    className="group glass-card p-8 spotlight"
-                    initial={{ opacity: 0, y: 20 }}
+                    className="glass-card p-8 group"
+                    initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
-                    whileHover={{ y: -5 }}
                   >
                     <motion.div
-                      className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${feature.gradient} flex items-center justify-center mb-6`}
+                      className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${feature.gradient} flex items-center justify-center mb-6 shadow-lg`}
                       whileHover={{ scale: 1.1, rotate: 5 }}
                       transition={{ type: "spring", stiffness: 300 }}
                     >
                       <Icon className="w-7 h-7 text-white" />
                     </motion.div>
-                    <h3 className="text-xl font-semibold mb-3 text-gray-100">
+                    <h3 className="text-xl font-semibold mb-3 text-gray-900 group-hover:gradient-text transition-all duration-300">
                       {feature.title}
                     </h3>
-                    <p className="text-gray-600">
+                    <p className="text-gray-600 leading-relaxed">
                       {feature.description}
                     </p>
                   </motion.div>
@@ -250,164 +316,304 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Platforms Section */}
-        <section id="download" className="px-4 py-20">
-          <div className="max-w-6xl mx-auto">
-            <motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                Available on Your Device
-              </h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Access Emotion Buddy wherever you are, whenever you need it
-              </p>
-            </motion.div>
+        {/* App Preview Section */}
+        <section className="py-32 relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-violet-100/50 to-transparent" />
 
-            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-              {/* iOS Card */}
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
               <motion.div
-                className="p-10 rounded-3xl bg-gradient-to-br from-purple-50 to-pink-50 border-2 border-purple-200 shadow-xl"
-                initial={{ opacity: 0, x: -20 }}
+                initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.8 }}
               >
-                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-600 to-pink-600 flex items-center justify-center mb-6">
-                  <Apple className="w-9 h-9 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold mb-3">
-                  iOS App
-                </h3>
-                <p className="text-gray-600 mb-6">
-                  Available for iPhone and iPad. Requires iOS 14.0 or later.
+                <span className="inline-block px-4 py-2 rounded-full bg-fuchsia-100 border border-fuchsia-200 text-fuchsia-600 text-sm font-medium mb-6">
+                  Privacy First
+                </span>
+                <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
+                  Your thoughts stay
+                  <span className="gradient-text"> yours</span>
+                </h2>
+                <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+                  We believe your innermost thoughts deserve the highest level of protection.
+                  That&apos;s why we built Emotion Buddy with privacy at its core.
                 </p>
-                <ul className="space-y-2 mb-8 text-gray-700">
-                  <li className="flex items-start">
-                    <span className="mr-2">✓</span>
-                    <span>Optimized for all iPhone models</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="mr-2">✓</span>
-                    <span>iPad support with adaptive layout</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="mr-2">✓</span>
-                    <span>Face ID / Touch ID security</span>
-                  </li>
-                </ul>
-                <motion.a
-                  href="https://apps.apple.com/us/app/emotion-buddy/id6755134472"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white rounded-full py-3 px-6 font-semibold transition-all shadow-lg block text-center"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  Download on App Store
-                </motion.a>
+
+                <div className="space-y-4">
+                  {[
+                    { icon: Lock, text: "AES-256 End-to-end encryption" },
+                    { icon: Phone, text: "Biometric authentication support" },
+                    { icon: Cloud, text: "Zero-knowledge architecture" },
+                  ].map((item, index) => (
+                    <motion.div
+                      key={index}
+                      className="flex items-center gap-4 p-4 rounded-2xl bg-white border border-gray-200 shadow-sm"
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: index * 0.1 }}
+                    >
+                      <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-violet-500 to-fuchsia-500 flex items-center justify-center">
+                        <item.icon className="w-5 h-5 text-white" />
+                      </div>
+                      <span className="text-gray-700">{item.text}</span>
+                    </motion.div>
+                  ))}
+                </div>
               </motion.div>
 
-              {/* Android Card */}
               <motion.div
-                className="p-10 rounded-3xl bg-gradient-to-br from-blue-50 to-purple-50 border-2 border-blue-200 shadow-xl"
-                initial={{ opacity: 0, x: 20 }}
+                className="relative"
+                initial={{ opacity: 0, x: 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.8 }}
               >
-                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center mb-6">
-                  <Smartphone className="w-9 h-9 text-white" />
+                <div className="relative mx-auto w-72 h-[580px]">
+                  {/* Phone Mockup */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-gray-800 to-gray-900 rounded-[3rem] shadow-2xl shadow-violet-500/20 border border-gray-700">
+                    <div className="absolute top-4 left-1/2 -translate-x-1/2 w-24 h-6 bg-black rounded-full" />
+                    <div className="absolute inset-4 rounded-[2.5rem] bg-gradient-to-br from-slate-900 to-slate-950 overflow-hidden">
+                      {/* App Screen Content */}
+                      <div className="p-6 h-full flex flex-col">
+                        <div className="text-center mb-6">
+                          <div className="w-16 h-16 mx-auto mb-3 rounded-2xl bg-gradient-to-br from-violet-500 to-fuchsia-500 flex items-center justify-center">
+                            <Heart className="w-8 h-8 text-white" />
+                          </div>
+                          <h4 className="text-white font-semibold">How are you feeling?</h4>
+                        </div>
+                        <div className="grid grid-cols-3 gap-2 mb-6">
+                          {['😊', '😌', '😔', '😤', '😰', '🥰'].map((emoji, i) => (
+                            <motion.div
+                              key={i}
+                              className="aspect-square rounded-xl bg-white/5 flex items-center justify-center text-2xl hover:bg-white/10 cursor-pointer"
+                              whileHover={{ scale: 1.1 }}
+                            >
+                              {emoji}
+                            </motion.div>
+                          ))}
+                        </div>
+                        <div className="flex-1 rounded-2xl bg-white/5 p-4">
+                          <div className="h-2 w-3/4 bg-white/10 rounded mb-2" />
+                          <div className="h-2 w-1/2 bg-white/10 rounded mb-4" />
+                          <div className="h-20 w-full bg-white/5 rounded-xl" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  {/* Glow Effect */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-violet-400/20 to-fuchsia-400/20 rounded-[3rem] blur-3xl -z-10" />
                 </div>
-                <h3 className="text-2xl font-bold mb-3">
-                  Android App
-                </h3>
-                <p className="text-gray-600 mb-6">
-                  Available for Android devices. Requires Android 8.0 or later.
-                </p>
-                <ul className="space-y-2 mb-8 text-gray-700">
-                  <li className="flex items-start">
-                    <span className="mr-2">✓</span>
-                    <span>Material Design 3 interface</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="mr-2">✓</span>
-                    <span>Tablet & phone support</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="mr-2">✓</span>
-                    <span>Fingerprint authentication</span>
-                  </li>
-                </ul>
-                <motion.a
-                  href="https://play.google.com/store/apps/details?id=com.emotionbuddy.mobile"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-full py-3 px-6 font-semibold transition-all shadow-lg block text-center"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  Get it on Google Play
-                </motion.a>
               </motion.div>
             </div>
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-emotion-blue via-emotion-pink to-emotion-coral relative overflow-hidden">
-          <motion.div
-            className="absolute inset-0 opacity-30"
-            animate={{
-              backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],
-            }}
-            transition={{
-              duration: 10,
-              repeat: Infinity,
-              ease: "linear"
-            }}
-            style={{
-              backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)',
-              backgroundSize: '50px 50px',
-            }}
-          />
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-            <motion.h2
-              className="text-3xl md:text-5xl font-bold text-white mb-6"
-              initial={{ opacity: 0, y: 20 }}
+        {/* Testimonials */}
+        <section className="py-32 relative">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
             >
-              Ready to Transform Your Emotional Wellness?
-            </motion.h2>
-            <motion.p
-              className="text-xl text-white/95 mb-8 max-w-2xl mx-auto"
-              initial={{ opacity: 0, y: 20 }}
+              <span className="inline-block px-4 py-2 rounded-full bg-cyan-100 border border-cyan-200 text-cyan-600 text-sm font-medium mb-6">
+                Testimonials
+              </span>
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
+                Loved by users
+              </h2>
+            </motion.div>
+
+            <div className="grid md:grid-cols-3 gap-6">
+              {testimonials.map((testimonial, index) => (
+                <motion.div
+                  key={index}
+                  className="glass-card p-8"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                >
+                  <div className="flex gap-1 mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 text-yellow-500 fill-yellow-500" />
+                    ))}
+                  </div>
+                  <p className="text-gray-700 mb-6 leading-relaxed">&quot;{testimonial.quote}&quot;</p>
+                  <div>
+                    <div className="font-semibold text-gray-900">{testimonial.author}</div>
+                    <div className="text-sm text-gray-500">{testimonial.role}</div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-32 relative">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
             >
-              Join thousands of users who are already on their journey to better mental health
-            </motion.p>
-            <motion.a
-              href="#download"
-              className="bg-white text-gray-900 font-semibold py-4 px-10 rounded-full hover:bg-gray-50 transition-all inline-block shadow-2xl"
-              initial={{ opacity: 0, y: 20 }}
+              <span className="inline-block px-4 py-2 rounded-full bg-emerald-100 border border-emerald-200 text-emerald-600 text-sm font-medium mb-6">
+                FAQ
+              </span>
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
+                Common questions
+              </h2>
+            </motion.div>
+
+            <div className="space-y-4">
+              {faqs.map((faq, index) => (
+                <motion.details
+                  key={index}
+                  className="glass-card group"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                >
+                  <summary className="flex items-center justify-between p-6 cursor-pointer list-none">
+                    <span className="font-semibold text-gray-900">{faq.question}</span>
+                    <ChevronDown className="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" />
+                  </summary>
+                  <div className="px-6 pb-6 text-gray-600 leading-relaxed">
+                    {faq.answer}
+                  </div>
+                </motion.details>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Download Section */}
+        <section id="download" className="py-32 relative">
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-violet-100/30 to-transparent" />
+
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+              {/* iOS Card */}
+              <motion.div
+                className="glass-card p-10 relative overflow-hidden"
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+              >
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-violet-400/20 to-transparent rounded-full blur-2xl" />
+
+                <div className="relative">
+                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-violet-600 to-purple-600 flex items-center justify-center mb-6 shadow-lg shadow-violet-500/30">
+                    <Apple className="w-9 h-9 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">iOS App</h3>
+                  <p className="text-gray-600 mb-6">
+                    Available for iPhone and iPad. Requires iOS 14.0 or later.
+                  </p>
+                  <ul className="space-y-3 mb-8">
+                    {['Optimized for all iPhone models', 'iPad support with adaptive layout', 'Face ID / Touch ID security'].map((item, i) => (
+                      <li key={i} className="flex items-center gap-3 text-gray-700">
+                        <Check className="w-5 h-5 text-violet-600" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                  <motion.a
+                    href="https://apps.apple.com/us/app/emotion-buddy/id6755134472"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full bg-gradient-to-r from-violet-600 to-purple-600 hover:from-violet-500 hover:to-purple-500 text-white rounded-2xl py-4 px-6 font-semibold transition-all shadow-lg shadow-violet-500/30 flex items-center justify-center gap-2"
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    <Apple className="w-5 h-5" />
+                    Download on App Store
+                  </motion.a>
+                </div>
+              </motion.div>
+
+              {/* Android Card */}
+              <motion.div
+                className="glass-card p-10 relative overflow-hidden"
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+              >
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-cyan-400/20 to-transparent rounded-full blur-2xl" />
+
+                <div className="relative">
+                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-cyan-600 to-blue-600 flex items-center justify-center mb-6 shadow-lg shadow-cyan-500/30">
+                    <Smartphone className="w-9 h-9 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">Android App</h3>
+                  <p className="text-gray-600 mb-6">
+                    Available for Android devices. Requires Android 8.0 or later.
+                  </p>
+                  <ul className="space-y-3 mb-8">
+                    {['Material Design 3 interface', 'Tablet & phone support', 'Fingerprint authentication'].map((item, i) => (
+                      <li key={i} className="flex items-center gap-3 text-gray-700">
+                        <Check className="w-5 h-5 text-cyan-600" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                  <motion.a
+                    href="https://play.google.com/store/apps/details?id=com.emotionbuddy.mobile"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white rounded-2xl py-4 px-6 font-semibold transition-all shadow-lg shadow-cyan-500/30 flex items-center justify-center gap-2"
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    <Play className="w-5 h-5" />
+                    Get it on Google Play
+                  </motion.a>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Final CTA */}
+        <section className="py-32 relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-violet-100/50 via-fuchsia-100/50 to-pink-100/50" />
+          <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.02)_1px,transparent_1px)] bg-[size:50px_50px]" />
+
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              transition={{ duration: 0.8 }}
             >
-              Get Started Free
-            </motion.a>
+              <h2 className="text-4xl md:text-6xl font-bold mb-6">
+                <span className="text-gray-900">Start your journey to</span>
+                <br />
+                <span className="gradient-text">emotional clarity</span>
+              </h2>
+              <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
+                Join people who have transformed their relationship with their emotions.
+                Your journey to self-understanding starts here.
+              </p>
+              <motion.a
+                href="#download"
+                className="btn-primary inline-flex items-center gap-2 text-lg"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Download Free
+                <ArrowRight className="w-5 h-5" />
+              </motion.a>
+              <p className="mt-6 text-sm text-gray-500">
+                No credit card required • Free forever plan available
+              </p>
+            </motion.div>
           </div>
         </section>
       </main>
