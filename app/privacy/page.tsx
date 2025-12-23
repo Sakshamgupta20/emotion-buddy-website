@@ -15,7 +15,7 @@ export default function PrivacyPolicy() {
     <div className="min-h-screen flex flex-col">
       <Header />
 
-      <main className="flex-grow py-16 md:py-24">
+      <main className="flex-grow pt-24 pb-12 md:pt-32 md:pb-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Hero Section */}
           <div className="text-center mb-8 md:mb-12">

@@ -13,16 +13,16 @@ export default function Support() {
     <div className="min-h-screen flex flex-col">
       <Header />
 
-      <main className="flex-grow py-16 md:py-24">
+      <main className="flex-grow pt-24 pb-12 md:pt-32 md:pb-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Hero Section */}
-          <div className="text-center mb-8 md:mb-12">
-            <div className="inline-flex items-center justify-center w-14 h-14 md:w-16 md:h-16 bg-gradient-to-br from-violet-500 to-fuchsia-500 rounded-xl md:rounded-2xl mb-4 md:mb-6">
-              <HelpCircle className="w-7 h-7 md:w-8 md:h-8 text-white" />
+          <div className="text-center mb-6 md:mb-12">
+            <div className="inline-flex items-center justify-center w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-violet-500 to-fuchsia-500 rounded-xl md:rounded-2xl mb-3 md:mb-6">
+              <HelpCircle className="w-6 h-6 md:w-8 md:h-8 text-white" />
             </div>
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold gradient-text mb-3 md:mb-4">Support & FAQ</h1>
-            <p className="text-gray-600 text-base md:text-lg px-4">
-              We&apos;re here to help! Find answers to common questions or reach out to our support team.
+            <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold gradient-text mb-2 md:mb-4">Support & FAQ</h1>
+            <p className="text-gray-600 text-sm md:text-lg">
+              Find answers or reach out to our support team.
             </p>
           </div>
 
@@ -49,16 +49,16 @@ export default function Support() {
 
           <div className="glass-card p-4 md:p-8 lg:p-12">
             {/* FAQ Section */}
-            <section className="mb-12">
-              <h2 className="text-2xl font-bold text-gray-900 mb-8">Frequently Asked Questions</h2>
+            <section className="mb-8 md:mb-12">
+              <h2 className="text-lg md:text-2xl font-bold text-gray-900 mb-4 md:mb-8">Frequently Asked Questions</h2>
 
               {/* Account Management */}
-              <div className="mb-10">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center gap-3">
-                  <User className="w-5 h-5 text-violet-500" />
+              <div className="mb-6 md:mb-10">
+                <h3 className="text-base md:text-xl font-semibold text-gray-900 mb-3 md:mb-4 flex items-center gap-2 md:gap-3">
+                  <User className="w-4 h-4 md:w-5 md:h-5 text-violet-500" />
                   Account Management
                 </h3>
-                <div className="space-y-4">
+                <div className="space-y-3 md:space-y-4">
                   <div className="border-l-4 border-violet-500 pl-4 py-2">
                     <h4 className="font-semibold text-gray-800 mb-2">How do I create an account?</h4>
                     <p className="text-gray-600 text-sm">
@@ -93,12 +93,12 @@ export default function Support() {
               </div>
 
               {/* Data & Privacy */}
-              <div className="mb-10">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center gap-3">
-                  <Shield className="w-5 h-5 text-cyan-500" />
+              <div className="mb-6 md:mb-10">
+                <h3 className="text-base md:text-xl font-semibold text-gray-900 mb-3 md:mb-4 flex items-center gap-2 md:gap-3">
+                  <Shield className="w-4 h-4 md:w-5 md:h-5 text-cyan-500" />
                   Data & Privacy
                 </h3>
-                <div className="space-y-4">
+                <div className="space-y-3 md:space-y-4">
                   <div className="border-l-4 border-cyan-500 pl-4 py-2">
                     <h4 className="font-semibold text-gray-800 mb-2">Is my journal data encrypted?</h4>
                     <p className="text-gray-600 text-sm">
@@ -133,12 +133,12 @@ export default function Support() {
               </div>
 
               {/* Features */}
-              <div className="mb-10">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center gap-3">
-                  <Sparkles className="w-5 h-5 text-fuchsia-500" />
+              <div className="mb-6 md:mb-10">
+                <h3 className="text-base md:text-xl font-semibold text-gray-900 mb-3 md:mb-4 flex items-center gap-2 md:gap-3">
+                  <Sparkles className="w-4 h-4 md:w-5 md:h-5 text-fuchsia-500" />
                   Features & Usage
                 </h3>
-                <div className="space-y-4">
+                <div className="space-y-3 md:space-y-4">
                   <div className="border-l-4 border-fuchsia-500 pl-4 py-2">
                     <h4 className="font-semibold text-gray-800 mb-2">How does AI analysis work?</h4>
                     <p className="text-gray-600 text-sm">
@@ -170,12 +170,12 @@ export default function Support() {
               </div>
 
               {/* Billing */}
-              <div className="mb-10">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center gap-3">
-                  <CreditCard className="w-5 h-5 text-emerald-500" />
+              <div className="mb-6 md:mb-10">
+                <h3 className="text-base md:text-xl font-semibold text-gray-900 mb-3 md:mb-4 flex items-center gap-2 md:gap-3">
+                  <CreditCard className="w-4 h-4 md:w-5 md:h-5 text-emerald-500" />
                   Billing & Subscriptions
                 </h3>
-                <div className="space-y-4">
+                <div className="space-y-3 md:space-y-4">
                   <div className="border-l-4 border-emerald-500 pl-4 py-2">
                     <h4 className="font-semibold text-gray-800 mb-2">Is Emotion Buddy free?</h4>
                     <p className="text-gray-600 text-sm">
@@ -194,15 +194,15 @@ export default function Support() {
             </section>
 
             {/* Troubleshooting */}
-            <section className="mb-12">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                <Wrench className="w-6 h-6 text-violet-500" />
-                Troubleshooting Guide
+            <section className="mb-8 md:mb-12">
+              <h2 className="text-lg md:text-2xl font-bold text-gray-900 mb-4 md:mb-6 flex items-center gap-2 md:gap-3">
+                <Wrench className="w-5 h-5 md:w-6 md:h-6 text-violet-500" />
+                Troubleshooting
               </h2>
 
-              <div className="space-y-4">
-                <div className="bg-gray-50 rounded-xl p-6">
-                  <h3 className="font-semibold text-gray-800 mb-3">App crashes or won&apos;t open</h3>
+              <div className="space-y-3 md:space-y-4">
+                <div className="bg-gray-50 rounded-xl p-4 md:p-6">
+                  <h3 className="font-semibold text-gray-800 mb-2 md:mb-3 text-sm md:text-base">App crashes or won&apos;t open</h3>
                   <ul className="list-disc pl-6 text-gray-600 space-y-2 text-sm">
                     <li>Make sure you&apos;re running the latest version of the app (check App Store/Google Play for updates)</li>
                     <li>Try force-closing the app and reopening it</li>
@@ -211,8 +211,8 @@ export default function Support() {
                   </ul>
                 </div>
 
-                <div className="bg-gray-50 rounded-xl p-6">
-                  <h3 className="font-semibold text-gray-800 mb-3">Sync issues or missing entries</h3>
+                <div className="bg-gray-50 rounded-xl p-4 md:p-6">
+                  <h3 className="font-semibold text-gray-800 mb-2 md:mb-3 text-sm md:text-base">Sync issues or missing entries</h3>
                   <ul className="list-disc pl-6 text-gray-600 space-y-2 text-sm">
                     <li>Check your internet connection</li>
                     <li>Go to Settings → Sync Settings → Tap &quot;Force Sync&quot;</li>
@@ -221,8 +221,8 @@ export default function Support() {
                   </ul>
                 </div>
 
-                <div className="bg-gray-50 rounded-xl p-6">
-                  <h3 className="font-semibold text-gray-800 mb-3">Can&apos;t log in or &quot;incorrect password&quot; error</h3>
+                <div className="bg-gray-50 rounded-xl p-4 md:p-6">
+                  <h3 className="font-semibold text-gray-800 mb-2 md:mb-3 text-sm md:text-base">Can&apos;t log in?</h3>
                   <ul className="list-disc pl-6 text-gray-600 space-y-2 text-sm">
                     <li>Double-check that you&apos;re using the correct email address</li>
                     <li>Use the &quot;Forgot Password?&quot; link to reset your password</li>
@@ -231,8 +231,8 @@ export default function Support() {
                   </ul>
                 </div>
 
-                <div className="bg-gray-50 rounded-xl p-6">
-                  <h3 className="font-semibold text-gray-800 mb-3">AI analysis not working</h3>
+                <div className="bg-gray-50 rounded-xl p-4 md:p-6">
+                  <h3 className="font-semibold text-gray-800 mb-2 md:mb-3 text-sm md:text-base">AI analysis not working</h3>
                   <ul className="list-disc pl-6 text-gray-600 space-y-2 text-sm">
                     <li>Make sure AI analysis is enabled (Settings → AI Settings)</li>
                     <li>AI analysis requires an internet connection</li>
@@ -244,62 +244,44 @@ export default function Support() {
             </section>
 
             {/* Quick Links */}
-            <section className="mb-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Additional Resources</h2>
-              <div className="grid md:grid-cols-2 gap-4">
-                <Link
-                  href="/privacy"
-                  className="bg-violet-50 hover:bg-violet-100 border border-violet-200 rounded-xl p-4 transition-colors"
-                >
-                  <h3 className="font-semibold text-gray-900 mb-1">Privacy Policy</h3>
-                  <p className="text-gray-600 text-sm">Learn how we protect your data</p>
+            <section className="mb-6 md:mb-8">
+              <h2 className="text-lg md:text-2xl font-bold text-gray-900 mb-3 md:mb-4">Resources</h2>
+              <div className="grid grid-cols-2 gap-2 md:gap-4">
+                <Link href="/privacy" className="bg-violet-50 border border-violet-200 rounded-lg md:rounded-xl p-3 md:p-4">
+                  <h3 className="font-semibold text-gray-900 text-sm md:text-base">Privacy</h3>
+                  <p className="text-gray-600 text-xs hidden md:block">How we protect your data</p>
                 </Link>
-                <Link
-                  href="/terms"
-                  className="bg-violet-50 hover:bg-violet-100 border border-violet-200 rounded-xl p-4 transition-colors"
-                >
-                  <h3 className="font-semibold text-gray-900 mb-1">Terms of Service</h3>
-                  <p className="text-gray-600 text-sm">Review our terms and conditions</p>
+                <Link href="/terms" className="bg-violet-50 border border-violet-200 rounded-lg md:rounded-xl p-3 md:p-4">
+                  <h3 className="font-semibold text-gray-900 text-sm md:text-base">Terms</h3>
+                  <p className="text-gray-600 text-xs hidden md:block">Terms and conditions</p>
                 </Link>
-                <Link
-                  href="/data-deletion"
-                  className="bg-violet-50 hover:bg-violet-100 border border-violet-200 rounded-xl p-4 transition-colors"
-                >
-                  <h3 className="font-semibold text-gray-900 mb-1">Data Deletion</h3>
-                  <p className="text-gray-600 text-sm">How to delete your account</p>
+                <Link href="/data-deletion" className="bg-violet-50 border border-violet-200 rounded-lg md:rounded-xl p-3 md:p-4">
+                  <h3 className="font-semibold text-gray-900 text-sm md:text-base">Data Deletion</h3>
+                  <p className="text-gray-600 text-xs hidden md:block">Delete your account</p>
                 </Link>
-                <a
-                  href="/#download"
-                  className="bg-violet-50 hover:bg-violet-100 border border-violet-200 rounded-xl p-4 transition-colors"
-                >
-                  <h3 className="font-semibold text-gray-900 mb-1">Download App</h3>
-                  <p className="text-gray-600 text-sm">Get Emotion Buddy for iOS or Android</p>
+                <a href="/#download" className="bg-violet-50 border border-violet-200 rounded-lg md:rounded-xl p-3 md:p-4">
+                  <h3 className="font-semibold text-gray-900 text-sm md:text-base">Download</h3>
+                  <p className="text-gray-600 text-xs hidden md:block">Get the app</p>
                 </a>
               </div>
             </section>
 
             {/* Still Need Help */}
-            <section className="bg-gradient-to-br from-violet-50 to-fuchsia-50 rounded-2xl p-6 border border-violet-200">
-              <h2 className="text-xl font-bold text-gray-900 mb-3">Still Need Help?</h2>
-              <p className="text-gray-700 mb-4">
-                Can&apos;t find the answer you&apos;re looking for? Our support team is here to help!
+            <section className="bg-gradient-to-br from-violet-50 to-fuchsia-50 rounded-xl md:rounded-2xl p-4 md:p-6 border border-violet-200">
+              <h2 className="text-base md:text-xl font-bold text-gray-900 mb-2 md:mb-3">Still Need Help?</h2>
+              <p className="text-gray-700 mb-3 md:mb-4 text-sm md:text-base">
+                Our support team is here to help!
               </p>
-              <div className="bg-white rounded-xl p-4">
-                <p className="text-gray-700 mb-2">
-                  <strong>Email us at:</strong>{' '}
-                  <a href="mailto:support@emotionbuddy.ai" className="text-violet-600 hover:underline text-lg font-medium">
+              <div className="bg-white rounded-lg md:rounded-xl p-3 md:p-4">
+                <p className="text-gray-700 mb-2 text-sm md:text-base">
+                  <strong>Email:</strong>{' '}
+                  <a href="mailto:support@emotionbuddy.ai" className="text-violet-600 hover:underline font-medium">
                     support@emotionbuddy.ai
                   </a>
                 </p>
-                <p className="text-gray-500 text-sm">
-                  Please include as much detail as possible about your issue, including:
+                <p className="text-gray-500 text-xs md:text-sm hidden md:block">
+                  Include device type, OS version, app version, and steps to reproduce.
                 </p>
-                <ul className="list-disc pl-6 text-gray-500 text-sm space-y-1 mt-2">
-                  <li>Your device type and operating system version</li>
-                  <li>App version (found in Settings → About)</li>
-                  <li>Steps to reproduce the issue</li>
-                  <li>Screenshots if applicable</li>
-                </ul>
               </div>
             </section>
           </div>
