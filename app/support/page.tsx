@@ -13,41 +13,41 @@ export default function Support() {
     <div className="min-h-screen flex flex-col">
       <Header />
 
-      <main className="flex-grow py-24">
+      <main className="flex-grow py-16 md:py-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Hero Section */}
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-violet-500 to-fuchsia-500 rounded-2xl mb-6">
-              <HelpCircle className="w-8 h-8 text-white" />
+          <div className="text-center mb-8 md:mb-12">
+            <div className="inline-flex items-center justify-center w-14 h-14 md:w-16 md:h-16 bg-gradient-to-br from-violet-500 to-fuchsia-500 rounded-xl md:rounded-2xl mb-4 md:mb-6">
+              <HelpCircle className="w-7 h-7 md:w-8 md:h-8 text-white" />
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold gradient-text mb-4">Support & FAQ</h1>
-            <p className="text-gray-600 text-lg">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold gradient-text mb-3 md:mb-4">Support & FAQ</h1>
+            <p className="text-gray-600 text-base md:text-lg px-4">
               We&apos;re here to help! Find answers to common questions or reach out to our support team.
             </p>
           </div>
 
           {/* Contact Card */}
-          <div className="glass-card p-8 mb-8">
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 bg-gradient-to-br from-violet-500 to-fuchsia-500 rounded-xl flex items-center justify-center flex-shrink-0">
-                <Mail className="w-6 h-6 text-white" />
+          <div className="glass-card p-4 sm:p-5 md:p-8 mb-6 md:mb-8">
+            <div className="flex flex-col sm:flex-row sm:items-start gap-3 sm:gap-4">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-violet-500 to-fuchsia-500 rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0">
+                <Mail className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
               </div>
-              <div>
-                <h2 className="text-2xl font-bold text-gray-900 mb-2">Contact Us</h2>
-                <p className="text-gray-600 mb-3">
-                  <strong>Email Support:</strong>{' '}
-                  <a href="mailto:support@emotionbuddy.ai" className="text-violet-600 hover:underline text-lg font-medium">
+              <div className="min-w-0 flex-1">
+                <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 mb-1 sm:mb-2">Contact Us</h2>
+                <p className="text-gray-600 mb-2 sm:mb-3 text-sm md:text-base">
+                  <strong>Email:</strong>{' '}
+                  <a href="mailto:support@emotionbuddy.ai" className="text-violet-600 hover:underline font-medium break-words">
                     support@emotionbuddy.ai
                   </a>
                 </p>
-                <p className="text-gray-500 text-sm">
+                <p className="text-gray-500 text-xs md:text-sm leading-relaxed">
                   We typically respond within 24 hours. For urgent issues, please include &quot;URGENT&quot; in your subject line.
                 </p>
               </div>
             </div>
           </div>
 
-          <div className="glass-card p-8 md:p-12">
+          <div className="glass-card p-4 md:p-8 lg:p-12">
             {/* FAQ Section */}
             <section className="mb-12">
               <h2 className="text-2xl font-bold text-gray-900 mb-8">Frequently Asked Questions</h2>

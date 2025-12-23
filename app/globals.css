@@ -7,10 +7,22 @@
     @apply scroll-smooth;
   }
 
+  html {
+    @apply overflow-x-hidden;
+    min-height: 100%;
+  }
+
   body {
-    @apply bg-white text-gray-900 antialiased;
+    @apply bg-white text-gray-900 antialiased overflow-x-hidden;
     background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
-    background-attachment: fixed;
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+
+  @supports (-webkit-touch-callout: none) {
+    body {
+      min-height: -webkit-fill-available;
+    }
   }
 
   /* Modern scrollbar */
@@ -129,27 +141,63 @@
 
   /* Section styling for content pages */
   .content-section {
-    @apply bg-white/60 backdrop-blur-sm rounded-2xl p-8 mb-8 border border-gray-100 shadow-sm;
+    @apply bg-white/60 backdrop-blur-sm rounded-xl p-4 mb-6 border border-gray-100 shadow-sm;
+  }
+
+  @media (min-width: 768px) {
+    .content-section {
+      @apply rounded-2xl p-8 mb-8;
+    }
   }
 
   .content-section h2 {
-    @apply text-2xl font-bold text-gray-900 mb-4 flex items-center gap-3;
+    @apply text-xl font-bold text-gray-900 mb-3 flex items-center gap-2;
+  }
+
+  @media (min-width: 768px) {
+    .content-section h2 {
+      @apply text-2xl mb-4 gap-3;
+    }
   }
 
   .content-section h3 {
-    @apply text-lg font-semibold text-gray-800 mb-2;
+    @apply text-base font-semibold text-gray-800 mb-2;
+  }
+
+  @media (min-width: 768px) {
+    .content-section h3 {
+      @apply text-lg;
+    }
   }
 
   .content-section p {
-    @apply text-gray-600 leading-relaxed mb-4;
+    @apply text-gray-600 leading-relaxed mb-3 text-sm;
+  }
+
+  @media (min-width: 768px) {
+    .content-section p {
+      @apply mb-4 text-base;
+    }
   }
 
   .content-section ul {
-    @apply space-y-2 mb-4;
+    @apply space-y-2 mb-3;
+  }
+
+  @media (min-width: 768px) {
+    .content-section ul {
+      @apply mb-4;
+    }
   }
 
   .content-section li {
-    @apply text-gray-600 flex items-start gap-2;
+    @apply text-gray-600 flex items-start gap-2 text-sm;
+  }
+
+  @media (min-width: 768px) {
+    .content-section li {
+      @apply text-base;
+    }
   }
 }
 

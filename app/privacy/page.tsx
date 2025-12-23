@@ -15,18 +15,18 @@ export default function PrivacyPolicy() {
     <div className="min-h-screen flex flex-col">
       <Header />
 
-      <main className="flex-grow py-24">
+      <main className="flex-grow py-16 md:py-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Hero Section */}
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-violet-500 to-fuchsia-500 rounded-2xl mb-6">
-              <Shield className="w-8 h-8 text-white" />
+          <div className="text-center mb-8 md:mb-12">
+            <div className="inline-flex items-center justify-center w-14 h-14 md:w-16 md:h-16 bg-gradient-to-br from-violet-500 to-fuchsia-500 rounded-xl md:rounded-2xl mb-4 md:mb-6">
+              <Shield className="w-7 h-7 md:w-8 md:h-8 text-white" />
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold gradient-text mb-4">Privacy Policy</h1>
-            <p className="text-gray-500">Last Updated: {lastUpdated}</p>
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold gradient-text mb-3 md:mb-4">Privacy Policy</h1>
+            <p className="text-gray-500 text-sm md:text-base">Last Updated: {lastUpdated}</p>
           </div>
 
-          <div className="glass-card p-8 md:p-12">
+          <div className="glass-card p-4 md:p-8 lg:p-12">
             {/* Introduction */}
             <section className="content-section">
               <h2><Eye className="w-6 h-6 text-violet-500" /> Introduction</h2>
