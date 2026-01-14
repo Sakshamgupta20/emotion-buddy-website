@@ -232,11 +232,64 @@ export default function PrivacyPolicy() {
               </p>
             </section>
 
-            {/* Section 7: Account Deletion */}
-            <section className="content-section" id="account-deletion">
-              <h2><Trash2 className="w-6 h-6 text-violet-500" /> 7. Account Deletion</h2>
+            {/* Section 7: Subscription & Cancellation */}
+            <section className="content-section" id="subscription-cancellation">
+              <h2>7. Subscription & Cancellation</h2>
 
-              <h3>7.1 How to Delete Your Account</h3>
+              <h3>7.1 Canceling Your Subscription</h3>
+              <p>
+                You can cancel your Emotion Buddy Premium subscription at any time. The cancellation method depends on how you purchased your subscription.
+              </p>
+
+              <h3>7.2 Cancellation by Platform</h3>
+
+              <div className="bg-gray-50 rounded-xl p-4 mb-4">
+                <h4 className="font-semibold text-gray-800 mb-2">Apple App Store (iOS)</h4>
+                <p className="text-sm text-gray-700 mb-2">If you purchased via Apple&apos;s in-app purchasing:</p>
+                <ul className="text-sm text-gray-700 space-y-1">
+                  <li>• Go to Settings → Your Name → Subscriptions on your iOS device</li>
+                  <li>• Select Emotion Buddy and tap &quot;Cancel Subscription&quot;</li>
+                  <li>• Or cancel via the App Store under your account</li>
+                </ul>
+              </div>
+
+              <div className="bg-gray-50 rounded-xl p-4 mb-4">
+                <h4 className="font-semibold text-gray-800 mb-2">Google Play Store (Android)</h4>
+                <p className="text-sm text-gray-700 mb-2">If you purchased via Google Play&apos;s in-app purchasing:</p>
+                <ul className="text-sm text-gray-700 space-y-1">
+                  <li>• Open the Google Play Store app</li>
+                  <li>• Tap Menu → Subscriptions → Emotion Buddy</li>
+                  <li>• Tap &quot;Cancel Subscription&quot; and follow the prompts</li>
+                </ul>
+              </div>
+
+              <div className="bg-gray-50 rounded-xl p-4 mb-4">
+                <h4 className="font-semibold text-gray-800 mb-2">Stripe (Web)</h4>
+                <p className="text-sm text-gray-700 mb-2">If you purchased directly via our website:</p>
+                <ul className="text-sm text-gray-700 space-y-1">
+                  <li>• Go to app settings → Subscription → Manage Subscription</li>
+                  <li>• Or email support@emotionbuddy.ai to request cancellation</li>
+                </ul>
+              </div>
+
+              <h3>7.3 Renewal & Refund Policy</h3>
+              <ul>
+                <li>Your subscription automatically renews unless you cancel at least 24 hours before the end of your current subscription period</li>
+                <li>If you cancel, your subscription remains active until the end of your current billing period</li>
+                <li>You will not receive a refund or credit for any remaining days in your current subscription period, unless required by law</li>
+                <li>You retain access to Premium features until the end of the paid period</li>
+              </ul>
+
+              <p className="text-sm text-gray-600 mt-3">
+                For more information, visit our <Link href="/support" className="text-violet-600 hover:underline font-medium">Support page</Link> or email us at <a href="mailto:support@emotionbuddy.ai" className="text-violet-600 hover:underline">support@emotionbuddy.ai</a>
+              </p>
+            </section>
+
+            {/* Section 8: Account Deletion */}
+            <section className="content-section" id="account-deletion">
+              <h2><Trash2 className="w-6 h-6 text-violet-500" /> 8. Account Deletion</h2>
+
+              <h3>8.1 How to Delete Your Account</h3>
               <p>
                 You can permanently delete your Emotion Buddy account at any time using our in-app deletion feature.
               </p>
@@ -258,9 +311,9 @@ export default function PrivacyPolicy() {
               </div>
             </section>
 
-            {/* Section 8: Children's Privacy */}
+            {/* Section 9: Children's Privacy */}
             <section className="content-section">
-              <h2>8. Children&apos;s Privacy</h2>
+              <h2>9. Children&apos;s Privacy</h2>
               <p>Emotion Buddy is intended for users aged 13 and older.</p>
               <ul>
                 <li>We do not knowingly collect data from children under 13</li>
@@ -272,17 +325,17 @@ export default function PrivacyPolicy() {
               </p>
             </section>
 
-            {/* Section 9: International Data Transfers */}
+            {/* Section 10: International Data Transfers */}
             <section className="content-section">
-              <h2><Globe className="w-6 h-6 text-violet-500" /> 9. International Data Transfers</h2>
+              <h2><Globe className="w-6 h-6 text-violet-500" /> 10. International Data Transfers</h2>
 
-              <h3>9.1 Data Location</h3>
+              <h3>10.1 Data Location</h3>
               <ul>
                 <li>Our servers are located in the United States</li>
                 <li>Your data may be transferred to, stored, and processed in the US</li>
               </ul>
 
-              <h3>9.2 For European Users (GDPR)</h3>
+              <h3>10.2 For European Users (GDPR)</h3>
               <p>If you are in the European Economic Area (EEA):</p>
               <ul>
                 <li>We comply with GDPR requirements</li>
@@ -290,7 +343,7 @@ export default function PrivacyPolicy() {
                 <li>You have additional rights under GDPR</li>
               </ul>
 
-              <h3>9.3 For California Users (CCPA)</h3>
+              <h3>10.3 For California Users (CCPA)</h3>
               <p>If you are a California resident:</p>
               <ul>
                 <li>You have rights under the California Consumer Privacy Act</li>
@@ -299,9 +352,9 @@ export default function PrivacyPolicy() {
               </ul>
             </section>
 
-            {/* Section 10: Changes to This Privacy Policy */}
+            {/* Section 11: Changes to This Privacy Policy */}
             <section className="content-section">
-              <h2>10. Changes to This Privacy Policy</h2>
+              <h2>11. Changes to This Privacy Policy</h2>
               <p>
                 We may update this Privacy Policy from time to time. Changes will be effective when posted.
               </p>
@@ -315,7 +368,7 @@ export default function PrivacyPolicy() {
 
             {/* Contact Section */}
             <section className="content-section">
-              <h2><Mail className="w-6 h-6 text-violet-500" /> 11. Contact Us</h2>
+              <h2><Mail className="w-6 h-6 text-violet-500" /> 12. Contact Us</h2>
               <p>
                 If you have questions about this Privacy Policy or our data practices, please contact us:
               </p>
