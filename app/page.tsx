@@ -184,7 +184,7 @@ function HeroSection() {
 // ============================================================================
 function ChatFeatureSection() {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: false, amount: 0.2 })
+  const isInView = useInView(ref, { once: true, amount: 0.1 })
 
   const features = [
     {
@@ -432,7 +432,7 @@ function ChatFeatureSection() {
 // ============================================================================
 function MoodTrackingSection() {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: false, amount: 0.2 })
+  const isInView = useInView(ref, { once: true, amount: 0.1 })
 
   const trackingMethods = [
     {
@@ -489,7 +489,7 @@ function MoodTrackingSection() {
             </div>
           </motion.div>
 
-          <h2 className="text-3xl md:text-5xl lg:text-7xl font-bold mb-4 md:mb-6">
+          <h2 className="text-3xl md:text-5xl lg:text-7xl font-bold mb-4 md:mb-6 text-white">
             Track Your Emotions
           </h2>
           <p className="text-base md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed px-4">
@@ -706,7 +706,7 @@ function MoodTrackingSection() {
 // ============================================================================
 function AnalyticsSection() {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: false, amount: 0.2 })
+  const isInView = useInView(ref, { once: true, amount: 0.1 })
 
   const features = [
     {
@@ -1126,7 +1126,7 @@ function AnalyticsSection() {
 // ============================================================================
 function InsightsSection() {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: false, amount: 0.2 })
+  const isInView = useInView(ref, { once: true, amount: 0.1 })
 
   return (
     <section ref={ref} className="py-20 md:py-32 bg-gradient-to-br from-orange-50 via-red-50 to-pink-50 overflow-hidden">
@@ -1295,7 +1295,7 @@ function InsightsSection() {
 // ============================================================================
 function PricingSection() {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: false, amount: 0.2 })
+  const isInView = useInView(ref, { once: true, amount: 0.1 })
 
   const plans = [
     {
@@ -1530,7 +1530,7 @@ function PricingSection() {
 // ============================================================================
 function SecuritySection() {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: false, amount: 0.2 })
+  const isInView = useInView(ref, { once: true, amount: 0.1 })
 
   const securityFeatures = [
     {
@@ -1662,7 +1662,7 @@ function SecuritySection() {
 // ============================================================================
 function FinalCTASection() {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: false, amount: 0.2 })
+  const isInView = useInView(ref, { once: true, amount: 0.1 })
 
   return (
     <section ref={ref} id="download" className="relative py-20 md:py-32 overflow-hidden">
