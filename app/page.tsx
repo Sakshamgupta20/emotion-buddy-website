@@ -89,11 +89,7 @@ function HeroSection() {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8 md:mb-12"
             >
-              <a
-                href="https://apps.apple.com/us/app/emotion-buddy/id6755134472"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href="#download">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -418,9 +414,7 @@ function ChatFeatureSection() {
             Start a conversation that understands you
           </p>
           <motion.a
-            href="https://app.emotionbuddy.ai/"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#download"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="inline-block bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-10 py-5 rounded-2xl font-bold text-lg shadow-2xl hover:shadow-purple-500/50 transition-all"
@@ -682,7 +676,7 @@ function MoodTrackingSection() {
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
           transition={{ duration: 0.8, delay: 1.3 }}
-          className="mt-20 grid grid-cols-3 gap-8 max-w-4xl mx-auto"
+          className="mt-20 grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-4xl mx-auto"
         >
           {[
             { icon: Target, label: '40+ Emotions', value: 'Tracked' },
@@ -1114,9 +1108,7 @@ function AnalyticsSection() {
             Turn your journal into a powerful tool for self-discovery
           </p>
           <motion.a
-            href="https://app.emotionbuddy.ai/"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#download"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="inline-block bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-10 py-5 rounded-2xl font-bold text-lg shadow-2xl hover:shadow-purple-500/50 transition-all"
@@ -1284,9 +1276,7 @@ function InsightsSection() {
               </p>
             </div>
             <motion.a
-              href="https://app.emotionbuddy.ai/"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#download"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="flex-shrink-0 bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white px-8 py-4 rounded-2xl font-bold shadow-lg hover:shadow-orange-500/50 transition-all whitespace-nowrap"
@@ -1661,20 +1651,6 @@ function SecuritySection() {
               </motion.div>
             ))}
           </div>
-        </motion.div>
-
-        {/* Trust badges */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={isInView ? { opacity: 1 } : { opacity: 0 }}
-          transition={{ delay: 1.2 }}
-          className="mt-12 flex justify-center items-center gap-8 flex-wrap"
-        >
-          {['SOC 2 Compliant', 'GDPR Ready', 'HIPAA Aligned', 'ISO 27001'].map((badge, i) => (
-            <div key={i} className="px-6 py-3 bg-white/10 rounded-full text-sm font-semibold border border-white/20">
-              {badge}
-            </div>
-          ))}
         </motion.div>
       </div>
     </section>
