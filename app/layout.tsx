@@ -6,6 +6,10 @@ export const metadata: Metadata = {
   description: 'Professional emotional wellness app with voice journaling, mood tracking on precision scales, and 12+ analytics visualizations including emotional journey charts, mood alignment, and crisis detection. AES-256 encrypted. Instant data deletion. Free for iOS & Android.',
   keywords: ['mood tracker', 'mental health app', 'AI journaling', 'emotional wellness', 'mood analytics', 'daily journal', 'voice notes', 'crisis detection', 'emotion tracking', 'mental health tracker', 'journal app', 'mindfulness', 'self-care'],
   authors: [{ name: 'Emotion Buddy' }],
+  icons: {
+    icon: '/images/logo.png',
+    apple: '/images/logo.png',
+  },
   openGraph: {
     title: 'Emotion Buddy - AI Journaling with 12+ Professional Analytics',
     description: 'Track your emotional wellness with precision mood tracking, 7 different visualization types, and AI-powered insights. Full privacy with instant account deletion and AES-256 encryption.',

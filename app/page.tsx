@@ -110,10 +110,9 @@ function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="grid grid-cols-3 gap-6 md:gap-8 max-w-md mx-auto lg:mx-0"
+              className="flex gap-8 md:gap-12 justify-center lg:justify-start"
             >
               {[
-                { value: '500K+', label: 'Active Users' },
                 { value: '10M+', label: 'Journal Entries' },
                 { value: '4.9★', label: 'App Rating' }
               ].map((stat, i) => (
@@ -125,91 +124,35 @@ function HeroSection() {
             </motion.div>
           </div>
 
-          {/* Right: Phone Mockups with Actual Screenshots */}
-          <div className="relative h-[450px] sm:h-[550px] lg:h-[650px] w-full flex items-center justify-center">
-            {/* Phone group container - all phones positioned from center */}
-            <div className="relative w-[320px] sm:w-[380px] md:w-[450px] lg:w-[520px] h-full">
-              {/* Left phone - Chat (behind) */}
+          {/* Right: Phone Mockup */}
+          <div className="flex items-center justify-center h-full">
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="w-[240px] sm:w-[280px] lg:w-[320px]"
+            >
               <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 1, delay: 0.5 }}
-                className="absolute left-0 top-1/2 -translate-y-1/2 z-10 hidden md:block w-[130px] md:w-[140px] lg:w-[160px]"
+                animate={{ y: [0, -15, 0] }}
+                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
               >
-                <motion.div
-                  animate={{ y: [0, 12, 0] }}
-                  transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                >
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-cyan-400 opacity-20 blur-2xl scale-110 rounded-[3rem]" />
-                  <div className="relative bg-gradient-to-br from-gray-800 to-gray-900 rounded-[2rem] md:rounded-[2.5rem] p-1.5 md:p-2 shadow-xl">
-                    <div className="bg-white rounded-[1.5rem] md:rounded-[2rem] overflow-hidden">
-                      <Image
-                        src="/images/app-screenshots/c3f4d894bfdcf7f9121b1da9a16f1f6ee1e41c1c.png"
-                        alt="AI Chat"
-                        width={200}
-                        height={433}
-                        className="w-full h-auto"
-                      />
-                    </div>
-                  </div>
-                </motion.div>
-              </motion.div>
+                {/* Glow effect */}
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-500 to-pink-500 opacity-30 blur-3xl scale-110 rounded-[3rem]" />
 
-              {/* Center phone - Home Screen (front) */}
-              <motion.div
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 w-[160px] sm:w-[170px] md:w-[180px] lg:w-[200px]"
-              >
-                <motion.div
-                  animate={{ y: [0, -15, 0] }}
-                  transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                >
-                  {/* Glow effect */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-purple-500 to-pink-500 opacity-30 blur-3xl scale-110 rounded-[3rem]" />
-
-                  {/* Phone frame */}
-                  <div className="relative bg-gradient-to-br from-gray-800 to-gray-900 rounded-[2rem] md:rounded-[2.5rem] p-1.5 md:p-2 shadow-2xl">
-                    <div className="bg-white rounded-[1.5rem] md:rounded-[2rem] overflow-hidden">
-                      <Image
-                        src="/images/app-screenshots/345ba0ceb2f98fb321631b606c595d917b39c3e4.png"
-                        alt="Home Screen"
-                        width={240}
-                        height={520}
-                        className="w-full h-auto"
-                      />
-                    </div>
+                {/* Phone frame */}
+                <div className="relative bg-gradient-to-br from-gray-800 to-gray-900 rounded-[3rem] p-2.5 shadow-2xl">
+                  <div className="bg-white rounded-[2.5rem] overflow-hidden">
+                    <Image
+                      src="/images/app-screenshots/345ba0ceb2f98fb321631b606c595d917b39c3e4.png"
+                      alt="Home Screen"
+                      width={320}
+                      height={693}
+                      className="w-full h-auto"
+                    />
                   </div>
-                </motion.div>
+                </div>
               </motion.div>
-
-              {/* Right phone - Your Journey (behind) */}
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 1, delay: 0.7 }}
-                className="absolute right-0 top-1/2 -translate-y-1/2 z-10 hidden md:block w-[130px] md:w-[140px] lg:w-[160px]"
-              >
-                <motion.div
-                  animate={{ y: [0, -12, 0] }}
-                  transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
-                >
-                  <div className="absolute inset-0 bg-gradient-to-br from-indigo-400 to-purple-400 opacity-20 blur-2xl scale-110 rounded-[3rem]" />
-                  <div className="relative bg-gradient-to-br from-gray-800 to-gray-900 rounded-[2rem] md:rounded-[2.5rem] p-1.5 md:p-2 shadow-xl">
-                    <div className="bg-white rounded-[1.5rem] md:rounded-[2rem] overflow-hidden">
-                      <Image
-                        src="/images/app-screenshots/655396ba337408e2b0647e6e4f480c0b1bab3375.png"
-                        alt="Your Journey"
-                        width={200}
-                        height={433}
-                        className="w-full h-auto"
-                      />
-                    </div>
-                  </div>
-                </motion.div>
-              </motion.div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
