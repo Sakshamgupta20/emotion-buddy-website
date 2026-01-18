@@ -50,12 +50,12 @@ export default function BlogArticle() {
 
         {/* Featured Image */}
         <section className="py-8 md:py-12">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[16/9]"
+              className="relative rounded-2xl overflow-hidden shadow-xl aspect-[3/2]"
             >
               <Image
                 src="/images/app-screenshots/journaling-hero.png"
