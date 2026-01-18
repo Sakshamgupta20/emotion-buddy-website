@@ -678,7 +678,7 @@ function FinalCTASection() {
 }
 
 // ============================================================================
-// BLOG SECTION (Coming Soon)
+// BLOG SECTION
 // ============================================================================
 function BlogSection() {
   const ref = useRef(null)
@@ -686,28 +686,86 @@ function BlogSection() {
 
   return (
     <section ref={ref} className="py-20 md:py-32 bg-gray-50">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6 }}
-          className="text-center"
+          className="text-center mb-12"
         >
-          <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
-            <Sparkles className="w-8 h-8 text-white" />
-          </div>
           <h2 className="text-3xl md:text-5xl font-bold mb-4 text-gray-900">
-            Blog Coming Soon
+            From Our Blog
           </h2>
-          <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-8">
-            We&apos;re working on insightful articles about emotional wellness, mental health tips, and journaling techniques. Stay tuned!
+          <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
+            Insights on emotional wellness, mental health tips, and journaling techniques.
           </p>
-          <div className="inline-flex items-center gap-2 px-6 py-3 bg-purple-100 text-purple-700 rounded-full font-medium">
+        </motion.div>
+
+        {/* Featured Article Card */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          <Link href="/blog/how-to-journal-with-ai-chat" className="group block">
+            <div className="grid md:grid-cols-2 gap-8 items-center bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow border border-gray-100">
+              {/* Image */}
+              <div className="relative h-64 md:h-80 overflow-hidden">
+                <Image
+                  src="/images/app-screenshots/journaling-hero.png"
+                  alt="AI Chat Journaling"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute top-4 left-4">
+                  <span className="bg-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full">
+                    New Article
+                  </span>
+                </div>
+              </div>
+
+              {/* Content */}
+              <div className="p-6 md:p-10">
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="text-sm font-semibold text-purple-600 bg-purple-100 px-3 py-1 rounded-full">
+                    Journaling Guide
+                  </span>
+                  <span className="text-sm text-gray-500">8 min read</span>
+                </div>
+                <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 group-hover:text-purple-600 transition-colors">
+                  How to Journal with AI Chat
+                </h3>
+                <p className="text-gray-600 mb-6">
+                  Discover how AI chat journaling removes the barriers of traditional journaling. No blank page anxiety, just natural conversations that help you understand your emotions better.
+                </p>
+                <span className="text-purple-600 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
+                  Read Article
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </Link>
+        </motion.div>
+
+        {/* View All Link */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="text-center mt-10"
+        >
+          <Link
+            href="/blog"
+            className="inline-flex items-center gap-2 text-purple-600 hover:text-purple-700 font-semibold text-lg transition-colors"
+          >
+            View All Articles
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
-            Check back soon for updates
-          </div>
+          </Link>
         </motion.div>
       </div>
     </section>
