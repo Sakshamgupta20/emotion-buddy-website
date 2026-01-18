@@ -1,5 +1,9 @@
 import type { Metadata } from 'next'
+import Script from 'next/script'
 import './globals.css'
+
+// Replace with your Google Analytics Measurement ID
+const GA_MEASUREMENT_ID = 'G-JP4RD7CG1J'
 
 export const metadata: Metadata = {
   title: 'Emotion Buddy - AI Journaling with 12+ Analytics | Track Your Mental Health',
@@ -31,6 +35,19 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
       </head>
       <body>
+        {/* Google Analytics */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_MEASUREMENT_ID}');
+          `}
+        </Script>
         {children}
       </body>
     </html>

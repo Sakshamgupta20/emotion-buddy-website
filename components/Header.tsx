@@ -34,11 +34,10 @@ export default function Header() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-1">
             {[
-              { href: '/#features', label: 'Features' },
-              { href: '/#download', label: 'Download' },
+              { href: '/features', label: 'Features' },
+              { href: '/blog', label: 'Blog' },
+              { href: '/#pricing', label: 'Pricing' },
               { href: '/support', label: 'Support' },
-              { href: '/privacy', label: 'Privacy' },
-              { href: '/terms', label: 'Terms' }
             ].map((item) => (
               <Link
                 key={item.href}
@@ -53,12 +52,14 @@ export default function Header() {
 
           {/* CTA Button - Desktop */}
           <div className="hidden md:block">
-            <Link
-              href="#download"
+            <a
+              href="https://app.emotionbuddy.ai/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-6 py-2.5 bg-gradient-to-r from-violet-600 via-fuchsia-600 to-pink-600 text-white font-semibold rounded-xl shadow-lg shadow-violet-500/30 hover:shadow-violet-500/50 hover:scale-105 transition-all duration-300"
             >
               Get Started
-            </Link>
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -86,11 +87,10 @@ export default function Header() {
         >
           <div className="py-4 space-y-1 border-t border-gray-200">
             {[
-              { href: '/#features', label: 'Features' },
-              { href: '/#download', label: 'Download' },
+              { href: '/features', label: 'Features' },
+              { href: '/blog', label: 'Blog' },
+              { href: '/#pricing', label: 'Pricing' },
               { href: '/support', label: 'Support' },
-              { href: '/privacy', label: 'Privacy' },
-              { href: '/terms', label: 'Terms' }
             ].map((item) => (
               <Link
                 key={item.href}
@@ -101,13 +101,15 @@ export default function Header() {
                 {item.label}
               </Link>
             ))}
-            <Link
-              href="#download"
+            <a
+              href="https://app.emotionbuddy.ai/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="block mx-4 mt-4 px-6 py-3 bg-gradient-to-r from-violet-600 via-fuchsia-600 to-pink-600 text-white font-semibold rounded-xl shadow-lg text-center"
               onClick={() => setMobileMenuOpen(false)}
             >
               Get Started
-            </Link>
+            </a>
           </div>
         </div>
       </nav>
