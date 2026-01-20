@@ -29,7 +29,7 @@ export default function BlogPage() {
 
       <main className="flex-grow">
         {/* Hero */}
-        <section className="py-16 md:py-24 bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50">
+        <section className="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
             <motion.h1
               initial={{ opacity: 0, y: 20 }}

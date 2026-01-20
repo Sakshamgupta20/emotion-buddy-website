@@ -147,7 +147,7 @@ export default function BlogArticle() {
                       <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-[2rem] p-2 shadow-xl">
                         <div className="bg-white rounded-[1.5rem] overflow-hidden">
                           <Image
-                            src="/images/app-screenshots/b1acfb52ae6f24673a3ede24bd84a6a9aaccf73b.png"
+                            src="/images/app-screenshots/c3f4d894bfdcf7f9121b1da9a16f1f6ee1e41c1c.png"
                             alt="Starting a journal conversation"
                             width={288}
                             height={624}
