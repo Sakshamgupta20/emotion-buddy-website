@@ -22,7 +22,7 @@ export default function PrivacyPolicy() {
             <div className="inline-flex items-center justify-center w-14 h-14 md:w-16 md:h-16 bg-gradient-to-br from-violet-500 to-fuchsia-500 rounded-xl md:rounded-2xl mb-4 md:mb-6">
               <Shield className="w-7 h-7 md:w-8 md:h-8 text-white" />
             </div>
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold gradient-text mb-3 md:mb-4">Privacy Policy</h1>
+            <h1 className="h-page gradient-text mb-3 md:mb-4">Privacy Policy</h1>
             <p className="text-gray-500 text-sm md:text-base">Last Updated: {lastUpdated}</p>
           </div>
 
@@ -381,7 +381,7 @@ export default function PrivacyPolicy() {
 
             {/* Quick Summary */}
             <section className="bg-gradient-to-br from-violet-50 to-fuchsia-50 rounded-2xl p-6 border border-violet-200">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Quick Summary</h2>
+              <h2 className="h-card text-gray-900 mb-4">Quick Summary</h2>
               <ul className="space-y-2 text-gray-700">
                 <li><strong>What we collect</strong>: Journal entries, mood data, photos/audio you upload</li>
                 <li><strong>Why</strong>: To provide journaling, mood tracking, and AI insights</li>

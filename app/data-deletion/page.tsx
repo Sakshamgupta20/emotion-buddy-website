@@ -20,7 +20,7 @@ export default function DataDeletion() {
             <div className="inline-flex items-center justify-center w-14 h-14 md:w-16 md:h-16 bg-gradient-to-br from-red-500 to-rose-500 rounded-xl md:rounded-2xl mb-4 md:mb-6">
               <Trash2 className="w-7 h-7 md:w-8 md:h-8 text-white" />
             </div>
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold gradient-text mb-3 md:mb-4">Data Deletion</h1>
+            <h1 className="h-page gradient-text mb-3 md:mb-4">Data Deletion</h1>
             <p className="text-gray-600 text-base md:text-lg px-4">
               Learn how to permanently delete your account and all associated data.
             </p>
@@ -181,7 +181,7 @@ export default function DataDeletion() {
             {/* Warning */}
             <section className="content-section">
               <div className="bg-red-50 border-2 border-red-300 rounded-xl p-6">
-                <h2 className="text-xl font-bold text-red-900 mb-3 flex items-center gap-2">
+                <h2 className="h-sub text-red-900 mb-3 flex items-center gap-2">
                   <AlertTriangle className="w-6 h-6" />
                   Warning: This Action is Permanent
                 </h2>
@@ -240,7 +240,7 @@ export default function DataDeletion() {
 
             {/* Contact */}
             <section className="bg-gradient-to-br from-violet-50 to-fuchsia-50 rounded-2xl p-6 border border-violet-200">
-              <h2 className="text-xl font-bold text-gray-900 mb-3">Need Help?</h2>
+              <h2 className="h-sub text-gray-900 mb-3">Need Help?</h2>
               <p className="text-gray-700 mb-2">
                 If you have questions about account deletion, please contact us:
               </p>

@@ -3,6 +3,7 @@
 import { useRef } from 'react'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import IntroVideoSection from '@/components/IntroVideoSection'
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion, useInView } from 'framer-motion'
@@ -56,18 +57,18 @@ function HeroSection() {
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-purple-100 to-pink-100 border border-purple-200 mb-6 md:mb-8"
             >
               <Sparkles className="w-4 h-4 text-purple-600" />
-              <span className="text-xs md:text-sm font-semibold text-purple-900">AI-Powered Emotional Wellness</span>
+              <span className="eyebrow text-purple-900">AI · Emotional Wellness</span>
             </motion.div>
 
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 md:mb-6 leading-tight"
+              className="h-hero mb-4 md:mb-6"
             >
-              Your Journey to
-              <span className="block bg-clip-text text-transparent bg-gradient-to-r from-purple-600 via-pink-600 to-indigo-600 pb-2">
-                Self-Discovery
+              Your journey to
+              <span className="block bg-clip-text text-transparent bg-gradient-to-r from-purple-600 via-pink-600 to-indigo-600 pb-2 italic font-normal">
+                self-discovery.
               </span>
             </motion.h1>
 
@@ -221,10 +222,10 @@ function FeaturesSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-5xl font-bold mb-4 text-gray-900">
-            Everything you need to understand yourself better
+          <h2 className="h-section mb-4 text-gray-900">
+            Everything you need to understand yourself better.
           </h2>
-          <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="lead max-w-2xl mx-auto">
             Simple tools, powerful insights. Start your journey to emotional wellness today.
           </p>
         </motion.div>
@@ -243,7 +244,7 @@ function FeaturesSection() {
                 <div className={`w-12 h-12 md:w-14 md:h-14 bg-gradient-to-br ${feature.color} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
                   <feature.icon className="w-6 h-6 md:w-7 md:h-7 text-white" />
                 </div>
-                <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">{feature.title}</h3>
+                <h3 className="h-card text-gray-900 mb-2">{feature.title}</h3>
                 <p className="text-gray-600 leading-relaxed">{feature.description}</p>
               </div>
             </motion.div>
@@ -382,8 +383,8 @@ function PricingSection() {
             </div>
           </motion.div>
 
-          <h2 className="text-3xl md:text-5xl lg:text-7xl font-bold mb-4 md:mb-6">
-            Simple, Transparent Pricing
+          <h2 className="h-hero mb-4 md:mb-6">
+            Simple, transparent pricing.
           </h2>
           <p className="text-base md:text-xl text-purple-200 max-w-3xl mx-auto leading-relaxed px-4">
             Start free and unlock more insights as you grow. All plans include
@@ -429,7 +430,7 @@ function PricingSection() {
                     <plan.icon className="w-7 h-7 text-white" />
                   </div>
 
-                  <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
+                  <h3 className="h-card mb-2">{plan.name}</h3>
                   <p className="text-purple-200 text-sm mb-6">{plan.description}</p>
 
                   <div className="mb-8">
@@ -565,9 +566,9 @@ function FinalCTASection() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 md:mb-8 bg-clip-text text-transparent bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600"
+          className="h-hero mb-6 md:mb-8 bg-clip-text text-transparent bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600"
         >
-          Start Your Journey Today
+          Start your journey today.
         </motion.h2>
 
         <motion.p
@@ -694,8 +695,8 @@ function BlogSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-5xl font-bold mb-4 text-gray-900">
-            From Our Blog
+          <h2 className="h-section mb-4 text-gray-900">
+            From our blog.
           </h2>
           <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
             Insights on emotional wellness, mental health tips, and journaling techniques.
@@ -733,8 +734,8 @@ function BlogSection() {
                   </span>
                   <span className="text-sm text-gray-500">8 min read</span>
                 </div>
-                <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 group-hover:text-purple-600 transition-colors">
-                  How to Journal with AI Chat
+                <h3 className="h-card text-3xl md:text-4xl text-gray-900 mb-4 group-hover:text-purple-600 transition-colors">
+                  How to journal with AI chat.
                 </h3>
                 <p className="text-gray-600 mb-6">
                   Discover how AI chat journaling removes the barriers of traditional journaling. No blank page anxiety, just natural conversations that help you understand your emotions better.
@@ -782,6 +783,7 @@ export default function Home() {
 
       <main className="flex-grow">
         <HeroSection />
+        <IntroVideoSection />
         <FeaturesSection />
         <BlogSection />
         <PricingSection />

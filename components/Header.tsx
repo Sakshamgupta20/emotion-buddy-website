@@ -25,7 +25,7 @@ export default function Header() {
                   />
                 </div>
               </div>
-              <span className="text-xl font-bold gradient-text">
+              <span className="brand-mark text-xl md:text-2xl gradient-text">
                 Emotion Buddy
               </span>
             </Link>

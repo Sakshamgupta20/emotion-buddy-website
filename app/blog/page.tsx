@@ -35,7 +35,7 @@ export default function BlogPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="text-4xl md:text-6xl font-bold mb-4 text-gray-900"
+              className="h-section mb-4 text-gray-900"
             >
               Blog
             </motion.h1>
@@ -104,7 +104,7 @@ export default function BlogPage() {
                         </span>
                         <span className="text-sm text-gray-500">{post.readTime}</span>
                       </div>
-                      <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 group-hover:text-purple-600 transition-colors">
+                      <h2 className="h-card text-2xl md:text-3xl text-gray-900 mb-4 group-hover:text-purple-600 transition-colors">
                         {post.title}
                       </h2>
                       <p className="text-gray-600 mb-6 line-clamp-3">
@@ -149,7 +149,7 @@ export default function BlogPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
                 </svg>
               </div>
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+              <h2 className="h-card text-2xl md:text-3xl text-gray-900 mb-4">
                 More Articles Coming Soon
               </h2>
               <p className="text-gray-600 max-w-lg mx-auto mb-8">

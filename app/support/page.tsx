@@ -20,7 +20,7 @@ export default function Support() {
             <div className="inline-flex items-center justify-center w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-violet-500 to-fuchsia-500 rounded-xl md:rounded-2xl mb-3 md:mb-6">
               <HelpCircle className="w-6 h-6 md:w-8 md:h-8 text-white" />
             </div>
-            <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold gradient-text mb-2 md:mb-4">Support & FAQ</h1>
+            <h1 className="h-page gradient-text mb-2 md:mb-4">Support & FAQ</h1>
             <p className="text-gray-600 text-sm md:text-lg">
               Find answers or reach out to our support team.
             </p>
@@ -33,7 +33,7 @@ export default function Support() {
                 <Mail className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
               </div>
               <div className="min-w-0 flex-1">
-                <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 mb-1 sm:mb-2">Contact Us</h2>
+                <h2 className="h-sub text-gray-900 mb-1 sm:mb-2">Contact Us</h2>
                 <p className="text-gray-600 mb-2 sm:mb-3 text-sm md:text-base">
                   <strong>Email:</strong>{' '}
                   <a href="mailto:support@emotionbuddy.ai" className="text-violet-600 hover:underline font-medium break-words">
@@ -50,7 +50,7 @@ export default function Support() {
           <div className="glass-card p-4 md:p-8 lg:p-12">
             {/* FAQ Section */}
             <section className="mb-8 md:mb-12">
-              <h2 className="text-lg md:text-2xl font-bold text-gray-900 mb-4 md:mb-8">Frequently Asked Questions</h2>
+              <h2 className="h-sub text-gray-900 mb-4 md:mb-8">Frequently Asked Questions</h2>
 
               {/* Account Management */}
               <div className="mb-6 md:mb-10">
@@ -195,7 +195,7 @@ export default function Support() {
 
             {/* Troubleshooting */}
             <section className="mb-8 md:mb-12">
-              <h2 className="text-lg md:text-2xl font-bold text-gray-900 mb-4 md:mb-6 flex items-center gap-2 md:gap-3">
+              <h2 className="h-sub text-gray-900 mb-4 md:mb-6 flex items-center gap-2 md:gap-3">
                 <Wrench className="w-5 h-5 md:w-6 md:h-6 text-violet-500" />
                 Troubleshooting
               </h2>
@@ -245,7 +245,7 @@ export default function Support() {
 
             {/* Quick Links */}
             <section className="mb-6 md:mb-8">
-              <h2 className="text-lg md:text-2xl font-bold text-gray-900 mb-3 md:mb-4">Resources</h2>
+              <h2 className="h-sub text-gray-900 mb-3 md:mb-4">Resources</h2>
               <div className="grid grid-cols-2 gap-2 md:gap-4">
                 <Link href="/privacy" className="bg-violet-50 border border-violet-200 rounded-lg md:rounded-xl p-3 md:p-4">
                   <h3 className="font-semibold text-gray-900 text-sm md:text-base">Privacy</h3>
@@ -268,7 +268,7 @@ export default function Support() {
 
             {/* Still Need Help */}
             <section className="bg-gradient-to-br from-violet-50 to-fuchsia-50 rounded-xl md:rounded-2xl p-4 md:p-6 border border-violet-200">
-              <h2 className="text-base md:text-xl font-bold text-gray-900 mb-2 md:mb-3">Still Need Help?</h2>
+              <h2 className="h-sub text-gray-900 mb-2 md:mb-3">Still Need Help?</h2>
               <p className="text-gray-700 mb-3 md:mb-4 text-sm md:text-base">
                 Our support team is here to help!
               </p>

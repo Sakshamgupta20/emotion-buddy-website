@@ -31,6 +31,59 @@
 }
 
 @layer components {
+  /* =========================================================================
+     Typography system — controlled centrally. Change a class here → it
+     updates across every page. Brand stack: Fraunces (display) + Inter (body)
+     + Space Mono (labels). Mirrors docs/brand/social-visual-system.md in the
+     mobile repo.
+     ========================================================================= */
+
+  /* Hero H1 — largest headline. Use for home hero + final CTAs. */
+  .h-hero {
+    @apply font-display font-medium tracking-tight leading-[1.02] text-balance
+           text-5xl sm:text-6xl md:text-7xl lg:text-[88px];
+  }
+
+  /* Section H2 — primary section headlines. */
+  .h-section {
+    @apply font-display font-medium tracking-tight leading-[1.05] text-balance
+           text-4xl md:text-5xl lg:text-6xl;
+  }
+
+  /* Page H1 — for secondary pages (privacy, terms, features subsections). */
+  .h-page {
+    @apply font-display font-medium tracking-tight leading-[1.1] text-balance
+           text-3xl md:text-4xl lg:text-5xl;
+  }
+
+  /* Card / article subhead H3. */
+  .h-card {
+    @apply font-display font-medium tracking-tight leading-[1.15]
+           text-xl md:text-2xl;
+  }
+
+  /* Smaller subhead. */
+  .h-sub {
+    @apply font-display font-medium tracking-tight leading-[1.2]
+           text-lg md:text-xl;
+  }
+
+  /* Mono eyebrow label — small caps with wide tracking. */
+  .eyebrow {
+    @apply font-mono uppercase tracking-[0.18em]
+           text-[10px] md:text-xs text-gray-500;
+  }
+
+  /* Lead paragraph — the sentence under a headline. */
+  .lead {
+    @apply text-base md:text-lg lg:text-xl text-gray-600 leading-relaxed;
+  }
+
+  /* Brand wordmark — used in header/footer logo text. */
+  .brand-mark {
+    @apply font-display font-medium tracking-tight;
+  }
+
   /* Modern Gradient Buttons - simplified on mobile */
   .btn-primary {
     @apply relative overflow-hidden bg-gradient-to-r from-violet-600 via-fuchsia-600 to-pink-600

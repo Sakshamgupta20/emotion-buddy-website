@@ -29,7 +29,7 @@ export default function BlogArticle() {
               </div>
 
               {/* Title */}
-              <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+              <h1 className="h-hero text-gray-900 mb-6">
                 How to Journal with AI Chat: A Complete Guide to Conversational Self-Reflection
               </h1>
 
@@ -85,7 +85,7 @@ export default function BlogArticle() {
               </p>
 
               {/* Section 1 */}
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-4">
+              <h2 className="h-card text-2xl md:text-3xl text-gray-900 mt-12 mb-4">
                 What is AI Chat Journaling?
               </h2>
               <p className="text-gray-600 leading-relaxed mb-6">
@@ -101,7 +101,7 @@ export default function BlogArticle() {
 
               {/* Benefit Box */}
               <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-6 md:p-8 my-8 border border-purple-100">
-                <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                <h3 className="h-card text-gray-900 mb-4 flex items-center gap-2">
                   <span className="text-2xl">✨</span> Key Benefits of AI Chat Journaling
                 </h3>
                 <ul className="space-y-3">
@@ -121,11 +121,11 @@ export default function BlogArticle() {
               </div>
 
               {/* Section 2 */}
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-4">
+              <h2 className="h-card text-2xl md:text-3xl text-gray-900 mt-12 mb-4">
                 How to Start Your First AI Chat Journal Session
               </h2>
 
-              <h3 className="text-xl font-bold text-gray-900 mt-8 mb-3">
+              <h3 className="h-card text-gray-900 mt-8 mb-3">
                 Step 1: Choose Your Starting Point
               </h3>
               <p className="text-gray-600 leading-relaxed mb-6">
@@ -163,7 +163,7 @@ export default function BlogArticle() {
                 </div>
               </div>
 
-              <h3 className="text-xl font-bold text-gray-900 mt-8 mb-3">
+              <h3 className="h-card text-gray-900 mt-8 mb-3">
                 Step 2: Let the Conversation Flow
               </h3>
               <p className="text-gray-600 leading-relaxed mb-6">
@@ -181,7 +181,7 @@ export default function BlogArticle() {
                 <li>&quot;What&apos;s one small thing that might help right now?&quot;</li>
               </ul>
 
-              <h3 className="text-xl font-bold text-gray-900 mt-8 mb-3">
+              <h3 className="h-card text-gray-900 mt-8 mb-3">
                 Step 3: Reflect on the Insights
               </h3>
               <p className="text-gray-600 leading-relaxed mb-6">
@@ -200,7 +200,7 @@ export default function BlogArticle() {
               </blockquote>
 
               {/* Section 3 */}
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-4">
+              <h2 className="h-card text-2xl md:text-3xl text-gray-900 mt-12 mb-4">
                 Tips for Effective AI Chat Journaling
               </h2>
 
@@ -238,7 +238,7 @@ export default function BlogArticle() {
               </div>
 
               {/* Analytics Section */}
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-4">
+              <h2 className="h-card text-2xl md:text-3xl text-gray-900 mt-12 mb-4">
                 Track Your Emotional Journey
               </h2>
               <p className="text-gray-600 leading-relaxed mb-6">
@@ -286,7 +286,7 @@ export default function BlogArticle() {
 
               {/* CTA Section */}
               <div className="bg-gradient-to-br from-purple-600 to-pink-600 rounded-2xl p-8 md:p-10 my-12 text-white text-center">
-                <h3 className="text-2xl md:text-3xl font-bold mb-4">
+                <h3 className="h-card text-2xl md:text-3xl mb-4">
                   Ready to Start Your Journey?
                 </h3>
                 <p className="text-purple-100 mb-6 max-w-lg mx-auto">
@@ -307,7 +307,7 @@ export default function BlogArticle() {
               </div>
 
               {/* Conclusion */}
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-4">
+              <h2 className="h-card text-2xl md:text-3xl text-gray-900 mt-12 mb-4">
                 Final Thoughts
               </h2>
               <p className="text-gray-600 leading-relaxed mb-6">

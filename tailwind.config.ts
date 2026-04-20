@@ -30,7 +30,10 @@ const config: Config = {
         },
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        // Brand stack — mirrors reflect-ai-mobile/docs/brand/social-visual-system.md
+        sans: ['var(--font-inter)', 'Inter', 'system-ui', 'sans-serif'],
+        display: ['var(--font-fraunces)', 'Fraunces', 'Georgia', 'serif'],
+        mono: ['var(--font-space-mono)', '"Space Mono"', 'ui-monospace', 'monospace'],
       },
       backgroundImage: {
         'gradient-emotion': 'linear-gradient(135deg, #89CFF0 0%, #E98BA6 50%, #F26D4E 100%)',

@@ -69,7 +69,7 @@ function ChatFeatureSection() {
             </div>
           </motion.div>
 
-          <h2 className="text-3xl md:text-5xl lg:text-7xl font-bold mb-4 md:mb-6 text-gray-900">
+          <h2 className="h-hero mb-4 md:mb-6 text-gray-900">
             Your AI Companion
           </h2>
           <p className="text-base md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
@@ -231,7 +231,7 @@ function ChatFeatureSection() {
                 <div className={`w-14 h-14 bg-gradient-to-br ${feature.color} rounded-2xl flex items-center justify-center mb-4 shadow-xl group-hover:scale-110 transition-transform`}>
                   <feature.icon className="w-7 h-7 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
+                <h3 className="h-card text-gray-900 mb-2">{feature.title}</h3>
                 <p className="text-gray-600 leading-relaxed">{feature.description}</p>
               </div>
             </motion.div>
@@ -304,7 +304,7 @@ function MoodTrackingSection() {
             </div>
           </motion.div>
 
-          <h2 className="text-3xl md:text-5xl lg:text-7xl font-bold mb-4 md:mb-6 text-white">
+          <h2 className="h-hero mb-4 md:mb-6 text-white">
             Track Your Emotions
           </h2>
           <p className="text-base md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed px-4">
@@ -479,7 +479,7 @@ function MoodTrackingSection() {
                 <div className={`w-16 h-16 bg-gradient-to-br ${method.color} rounded-2xl flex items-center justify-center mb-6 shadow-xl group-hover:scale-110 transition-transform`}>
                   <method.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold mb-3">{method.title}</h3>
+                <h3 className="h-card mb-3">{method.title}</h3>
                 <p className="text-gray-300 leading-relaxed">{method.description}</p>
               </div>
             </motion.div>
@@ -571,7 +571,7 @@ function AnalyticsSection() {
             </div>
           </motion.div>
 
-          <h2 className="text-3xl md:text-5xl lg:text-7xl font-bold mb-4 md:mb-6 text-gray-900">
+          <h2 className="h-hero mb-4 md:mb-6 text-gray-900">
             Advanced Analytics
           </h2>
           <p className="text-base md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
@@ -599,7 +599,7 @@ function AnalyticsSection() {
                   <BarChart3 className="w-5 h-5 sm:w-6 sm:h-6 text-purple-600" />
                 </div>
                 <div>
-                  <h3 className="text-lg sm:text-xl font-bold text-gray-900">Mood Alignment</h3>
+                  <h3 className="h-card text-gray-900">Mood Alignment</h3>
                   <p className="text-xs sm:text-sm text-gray-500">Your perception vs AI analysis</p>
                 </div>
               </div>
@@ -689,7 +689,7 @@ function AnalyticsSection() {
                   <TrendingUp className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-lg sm:text-xl font-bold text-gray-900">Insights</h3>
+                  <h3 className="h-card text-gray-900">Insights</h3>
                   <p className="text-xs sm:text-sm text-gray-500">Your emotional well-being dashboard</p>
                 </div>
               </div>
@@ -774,7 +774,7 @@ function AnalyticsSection() {
                 <div className={`w-14 h-14 bg-gradient-to-br ${feature.color} rounded-2xl flex items-center justify-center mb-4 shadow-xl group-hover:scale-110 transition-transform`}>
                   <feature.icon className="w-7 h-7 text-white" />
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">{feature.title}</h3>
+                <h3 className="h-card text-gray-900 mb-2">{feature.title}</h3>
                 <p className="text-sm text-gray-600 leading-relaxed">{feature.description}</p>
               </div>
             </motion.div>
@@ -813,7 +813,7 @@ function InsightsSection() {
             </div>
           </motion.div>
 
-          <h2 className="text-3xl md:text-5xl lg:text-7xl font-bold mb-4 md:mb-6 text-gray-900">
+          <h2 className="h-hero mb-4 md:mb-6 text-gray-900">
             Discover Your Patterns
           </h2>
           <p className="text-base md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
@@ -840,7 +840,7 @@ function InsightsSection() {
                 <Tag className="w-6 h-6 text-purple-600" />
               </div>
               <div>
-                <h3 className="text-xl sm:text-2xl font-bold text-gray-900">Topics & Themes</h3>
+                <h3 className="h-card text-gray-900">Topics & Themes</h3>
                 <p className="text-sm text-gray-500">What you&apos;ve been journaling about</p>
               </div>
             </div>
@@ -963,7 +963,7 @@ function SecuritySection() {
             </div>
           </motion.div>
 
-          <h2 className="text-3xl md:text-5xl lg:text-7xl font-bold mb-4 md:mb-6">
+          <h2 className="h-hero mb-4 md:mb-6">
             Your Privacy, Protected
           </h2>
           <p className="text-base md:text-xl text-blue-200 max-w-3xl mx-auto leading-relaxed px-4">
@@ -995,7 +995,7 @@ function SecuritySection() {
                   <div className="w-14 h-14 bg-gradient-to-br from-blue-400 to-cyan-400 rounded-2xl flex items-center justify-center mb-4 shadow-xl group-hover:scale-110 transition-transform">
                     <feature.icon className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
+                  <h3 className="h-card mb-2">{feature.title}</h3>
                   <p className="text-blue-200 leading-relaxed text-sm">{feature.description}</p>
                 </div>
               </div>
@@ -1042,7 +1042,7 @@ export default function FeaturesPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="text-4xl md:text-6xl font-bold mb-4 text-gray-900"
+              className="h-section mb-4 text-gray-900"
             >
               Features
             </motion.h1>
@@ -1096,7 +1096,7 @@ export default function FeaturesPage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="text-3xl md:text-5xl font-bold mb-6"
+              className="h-section mb-6"
             >
               Ready to start your journey?
             </motion.h2>

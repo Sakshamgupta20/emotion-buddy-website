@@ -22,7 +22,7 @@ export default function TermsOfService() {
             <div className="inline-flex items-center justify-center w-14 h-14 md:w-16 md:h-16 bg-gradient-to-br from-violet-500 to-fuchsia-500 rounded-xl md:rounded-2xl mb-4 md:mb-6">
               <FileText className="w-7 h-7 md:w-8 md:h-8 text-white" />
             </div>
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold gradient-text mb-3 md:mb-4">Terms of Service</h1>
+            <h1 className="h-page gradient-text mb-3 md:mb-4">Terms of Service</h1>
             <p className="text-gray-500 text-sm md:text-base">Last Updated: {lastUpdated}</p>
           </div>
 
@@ -313,7 +313,7 @@ export default function TermsOfService() {
 
             {/* Acknowledgment */}
             <section className="bg-gradient-to-br from-violet-50 to-fuchsia-50 rounded-2xl p-6 border border-violet-200">
-              <h2 className="text-xl font-bold text-gray-900 mb-3">Acknowledgment</h2>
+              <h2 className="h-sub text-gray-900 mb-3">Acknowledgment</h2>
               <p className="text-gray-700">
                 By using Emotion Buddy, you acknowledge that you have read these Terms of Service, understand them, and agree to be bound by them.
               </p>

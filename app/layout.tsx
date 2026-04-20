@@ -1,9 +1,34 @@
 import type { Metadata } from 'next'
 import Script from 'next/script'
+import { Inter, Fraunces, Space_Mono } from 'next/font/google'
 import './globals.css'
 
 // Replace with your Google Analytics Measurement ID
 const GA_MEASUREMENT_ID = 'G-JP4RD7CG1J'
+
+// Emotion Buddy brand typography stack — mirrors docs/brand/social-visual-system.md
+// Inter: body · Fraunces: display/headlines · Space Mono: labels/eyebrows
+const inter = Inter({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-inter',
+  display: 'swap',
+})
+
+const fraunces = Fraunces({
+  subsets: ['latin'],
+  weight: ['400', '500', '600'],
+  style: ['normal', 'italic'],
+  variable: '--font-fraunces',
+  display: 'swap',
+})
+
+const spaceMono = Space_Mono({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  variable: '--font-space-mono',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   title: 'Emotion Buddy - AI Journaling with 12+ Analytics | Track Your Mental Health',
@@ -28,13 +53,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-      </head>
-      <body>
+    <html lang="en" className={`${inter.variable} ${fraunces.variable} ${spaceMono.variable}`}>
+      <body className="font-sans">
         {/* Google Analytics */}
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
